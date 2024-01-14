@@ -1,2 +1,2 @@
 # LaTeX
-All of my work in the LaTeX typesetting system.
+All of my math work in the LaTeX typesetting system.
