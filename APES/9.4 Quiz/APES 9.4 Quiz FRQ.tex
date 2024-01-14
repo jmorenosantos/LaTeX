@@ -1,0 +1,39 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts,  graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+
+\begin{document}
+
+\next
+(a) To identify the two countries with the same crude growth rate (r), we employ the formula:
+\[r=\frac{\text{Crude Birth rate} - \text{Crude Death Rate} + \text{Immigration Rate}}{10}\]
+Calculating $r$ for each country yields the following:
+\begin{enumerate}[I.]
+    \item \[r=\frac{15-13+3}{10}=0.5\%\]
+    \item \[r=\frac{18-5+1}{10}=1.4\%\]
+    \item \[r=\frac{20-10+1}{10}=1.1\%\]
+    \item \[r=\frac{16-12+1}{10}=0.5\%\]
+\end{enumerate}
+Countries I and IV have the same $r$ of $0.5\%$.\\
+
+\vs\next
+(b) The doubling time $(t_d)$ for Country II is given by the Rule of 70:
+\[t_d=\frac{70}{r}=\frac{70}{1.4}=50\,\,\text{years}\]
+
+\next
+(c) To predict a country's future population $(P_t)$, we consider $P_0$ as the curent population and use the formula
+\[P_t=P_0e^{rt}\]
+For each country:
+\begin{enumerate}[I.]
+    \item \[P_t=10000000\cdot e^{0.005\cdot 140}\approx 16621985\]
+    \item \[P_t=25000000\cdot e^{0.014\cdot 140}\approx 314880594\]
+    \item \[P_t=25000000\cdot e^{0.011\cdot 140}\approx 224882933\]
+    \item \[P_t=100000000\cdot e^{0.005\cdot 140}\approx 166626794\]
+\end{enumerate}
+
+Conutry III is predicted to have the population closest to 200000000. Thus, Country III is the predicted country.
+\end{document}

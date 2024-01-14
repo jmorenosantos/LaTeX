@@ -1,0 +1,118 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts,  graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+\newcommand*{\im}{\includegraphics}
+
+\begin{document}
+
+\title{Notes - 4.5 Integration by Substitution}
+\author{Juan J. Moreno Santos}
+\date{November 2023}
+
+\maketitle
+The Chain Rule states that
+\[\frac{d}{dx}(F(g(x)))=F'(g(x))g'(x)\]
+Defining an antiderivative follows that
+\[\int F'(g(x))g'(x)dx=F(g(x))+C\]
+
+\section{Antidifferentiation of a composite function}
+Let be $g$ a function whose range is an interval $I$ and let $f$ be a function that is
+continuous on $I$ If $g$ is differentiable on its domain and $F$ is an antiderivative
+of $f$ on $I$ then
+\[\int f(g(x))g'(x)dx=F(g(x))+C\]
+By letting $u=g(x)$ gives $du=g'(x)$ and
+\[\int f(u)du=F(u)+C\]
+\im{theorem.png}
+
+\subsection{Recognizing the $f(g(x))g'(x)$ pattern}
+\im{ex1.png}
+Class solution ("Is the derivative of the inside on the outside?)
+\begin{align}
+    \set
+    &\int(x^2+1)^2(2x)dx\\
+    u&=x^2+1\\
+    du&=2xdx\\
+    &\int u^2du\\
+    &=\frac{1}{3}(u)^3+C\\
+    &=\frac{1}{3}(x^2+1)^3+C
+\end{align}
+You have done u-substitution correctly if you don't have any more of the original variables.
+
+\vs\next
+2. Find $\int 5\cos 5dx$
+\begin{align}
+    \set
+    u&=5x\\
+    du&=5dx\\
+    \int 5\cos 5dx&=\int\cos u du=\sin 5x+C
+\end{align}
+
+Restating the Constant Multiple Rule
+\[\int kf(x)dx=k\int f(x)dx\]
+
+\im{ex3.png}
+
+\section{Change of variables}
+\[\int f(g(x))g'(x)dx=\int f(u)du=F(u)+C\]
+\subsection{Example}
+\begin{align}
+    \set
+    u&=2x-1\Rightarrow x=\frac{1}{2}u+\frac{1}{2}\\
+    du&=2dx\Rightarrow \frac{1}{2}du=dx\\
+    &\int x\sqrt[]{2x-1}dx\\
+    &=\int\left(\frac{1}{2}u+\frac{1}{2}\right)\sqrt[]{u}\frac{1}{2}du\\
+    &=\frac{1}{2}(u+1)u^{1/2}du\\
+    &=\frac{1}{4}\int u^{3/2}+u^{1/2}du\\
+    &=\frac{1}{4}\left(\frac{2}{5}u^{5/2}+\frac{2}{3}u^{3/2}\right)+C\\
+    &=\frac{1}{10}(2x-1)^{5/2}+\frac{1}{6}(2x-1)^{3/2}+C
+\end{align}
+
+\subsection{Example 2}
+\begin{align}
+    &\int\sin^2 3x\cos 3xdx\\
+    u&=\sin 3x\\
+    du&=\cos(3x)\cdot 3dx\Rightarrow \frac{du}{3}=\cos(3x)dx\\
+    &\int\sin^2 3x\cos 3xdx\\
+    &=\int u^2\cdot\frac{du}{3}\\
+    &=\frac{1}{3}\int u^2du\\
+    &=\frac{1}{3}\left(\frac{u^3}{3}\right)+C\\
+    &=\frac{1}{9}u^3+C\\
+    &=\frac{1}{9}\sin^3 3x+C
+\end{align}
+
+\section{12/01/2023 Warm-up}
+
+\begin{align}
+    \set
+    &\lim_{x\to\infty}\frac{x^2-4}{2+x^4-2}\\
+    &=\lim_{x\to\infty}\frac{x^2-4}{2+x-4x^2}\left(\frac{\frac{1}{x^2}}{\frac{1}{x^2}}\right)\\
+    &=\lim_{x\to\infty}\frac{1-\frac{4}{x^2}}{-4+\frac{1}{x}+\frac{1}{x^2}}\\
+    &=0
+\end{align}
+
+\section{4.5 Problem 2}
+\begin{align}
+    u&=x^3+1,\,\, du=3x^2dx\Rightarrow\frac{du}{3}=x^2dx\\
+    &\int x^2\sqrt[]{x^3+1}dx\\
+    &=\int\frac{\sqrt[]{u}}{3}dx\\
+    &=\frac{1}{3}\int u^{1/2}du\\
+    &=\frac{1}{3}\frac{u^{3/2}}{\frac{3}{2}}+C\\
+    &=\frac{2}{9}(x^3+1)^{3/2}+C
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,105 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts,  graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+\newcommand*{\im}{\includegraphics}
+\newcommand*{\lt}{\left}
+\newcommand*{\rt}{\right}
+
+\begin{document}
+
+\title{5.2 lab calculations}
+\author{Juan J. Moreno Santos}
+\date{December 2023}
+
+\maketitle
+\section{Dominance - D}
+\begin{enumerate}
+    \item Teacher lot:
+        \begin{align}
+            \set
+            D_A=\frac{6}{54}
+        \end{align}
+    \item Student lot:
+        \begin{align}
+            \set
+            D_B=\frac{6}{66}
+        \end{align}
+\end{enumerate}
+
+\section{Species richness - R}
+\[\text{Number of types of vehicles}-\text{Types of cars not in the parking lot}\]
+
+\begin{enumerate}
+    \item Teacher lot:
+        \begin{align}
+            \set
+            R=41-15=26
+        \end{align}
+    \item Student lot:
+        \begin{align}
+            \set
+            R=41-8=33
+        \end{align}
+\end{enumerate}
+
+\section{Shannon-Wiener Index - H}
+\begin{enumerate}
+\item Teacher lot (Honda SUV):
+\begin{align}
+    \set
+    H&=\sum(P_i\ln[P_i])\\
+    P_i&=5\\
+    N&=54\\
+    P_i=\frac{n_i}{N}&=\frac{5}{54}\\
+    H&=-\sum_{i=1}^{26}\frac{5}{54}\ln\frac{5}{54}=5.7
+\end{align}
+\item Student lot (Subaru car):
+\begin{align}
+    \set
+    H&=-\sum(P_i\ln[P_i])\\
+    P_i&=5\\
+    N&=66\\
+    P_i=\frac{n_i}{N}&=\frac{5}{66}\\
+    H&=-\sum_{i=1}^{33}\frac{5}{66}\ln\frac{5}{66}=6.5
+\end{align}
+\end{enumerate}
+
+\section{Species Evenness - E}
+\begin{enumerate}
+    \item Teacher lot:
+        \begin{align}
+            \set
+            E&=\frac{H}{\ln(R)}\\
+            &=\frac{5.7}{\ln(26)}=1.75
+        \end{align}
+    \item Student lot:
+        \begin{align}
+            \set
+            E&=\frac{H}{\ln(R)}\\
+            &=\frac{6.5}{\ln(33)}=1.86
+        \end{align}
+\end{enumerate}
+
+\begin{enumerate}[(a)]
+    \item 
+        \begin{align}
+            \set
+            1950:\frac{5.2\cdot 10^{10}\text{kg}}{2.6\cdot 10^9\text{people}}=\text{20 meat kg per capita}\\
+            2000:\frac{2.4\cdot 10^{11}\text{kg}}{6\cdot 10^9\text{people}}=\text{40 meat kg per capita}\\
+            \frac{40\text{kg}}{20\text{kg}}=2\Rightarrow\text{100\% increase}
+        \end{align}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+\end{document}

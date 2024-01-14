@@ -1,0 +1,426 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts,  graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+\newcommand*{\im}{\includegraphics}
+
+\begin{document}
+
+\title{4.1 Antiderivatives and Indefinite Integration}
+\author{Juan J. Moreno Santos}
+\date{November 2023}
+
+\maketitle
+
+\section{Verify that the statement by showing that the derivative of the right side equals the integrand of the left side.}
+2.\begin{align}
+    \set
+    \int \left(8x^3+\frac{1}{2x^2}\right)dx&=2x^4-\frac{1}{2}x^{-1}+C\\
+    \frac{d}{dx}\left(2x^4-\frac{1}{2x}+C\right)&=\frac{d}{dx}\left(2x^4-\frac{1}{2}x^{-1}+C\right)\\
+    &=8x^3+\frac{1}{2}x^{-2}\\
+    &=8x^3+\frac{1}{2x^2}
+\end{align}
+
+\section{Find the general solution of the differential equation and check the result by differentiation.}
+6.\begin{align}
+    \set
+    \frac{dr}{d\theta}&=\pi\\
+    r&=\pi\theta+C\because\frac{d}{d\theta}[\pi\theta+C]=\pi\\
+\end{align}
+
+\vs\next
+8.\begin{align}
+    \set
+    \frac{dy}{dx}&=2x^{-3}\\
+    y&=\frac{2x^{-2}}{-2}+C\\
+    &=\frac{-1}{x^2}+C\because \frac{d}{dx}\left(\frac{-1}{x^2}+C\right)=2x^{-3}
+\end{align}
+
+\section{Complete the table.}
+\begin{flushleft}
+    \begin{table}[h]
+        \begin{tabular}{|l|l|l|l|}
+        \hline
+        Original integral & Rewrite & Integrate & Simplify\\\hline
+        10. $\int\frac{1}{x\sqrt[]{x}}dx$ & $\frac{1}{4}\int x^{-2}dx$ & $\frac{1}{4}\frac{x^{-1}}{-1}+C$ & $-\frac{1}{4x}+C$\\\hline
+        14. $\int \frac{1}{(3x)^2}dx$ & $\frac{1}{9}\int x^{-2}dx$ & $\frac{1}{9}\left(\frac{x^{-1}}{-1}\right)+C$ & $\frac{-1}{9x}+C$\\\hline
+        \end{tabular}
+    \end{table}
+\end{flushleft}
+
+\section{Find the indefinite integral and check the result by differentiation.}
+16.\begin{align}
+    \set
+    &\int(13-x)dx\\
+    &=13x-\frac{x^2}{2}+C\because\frac{d}{dx}\left(13x-\frac{x^2}{2}+C\right)=13-x
+\end{align}
+
+\vs\next
+20.\begin{align}
+    \set
+    &\int(x^3-10x-3)dx\\
+    &=\frac{x^4}{4}-5x^2-3x+C\because\frac{d}{dx}\left(\frac{x^4}{4}-5x^2-3x+C\right)=x^3-10x-3
+\end{align}
+
+\vs\next
+24.\begin{align}
+    \set
+    &\int(\sqrt[4]{x^3}+1)dx\\
+    &=\int(x^{3/4}+1)dx\\
+    &=\frac{4}{7}x^{7/4}+x+C\because\frac{d}{dx}\left(\frac{4}{7}x^{7/4}+x+C\right)=x^{3/4}+1=\sqrt[4]{x^3}+1
+\end{align}
+
+\vs\next
+28.\begin{align}
+    \set
+    &\int\frac{x^2+2x-3}{x^4}dx\\
+    &=\int(x^{-2}+2x^{-3}-3x^{-4})dx\\
+    &=\frac{x^{-1}}{-1}+\frac{2x^{-2}}{-2}-\frac{3x^{-3}}{-3}+C\\
+    &=\frac{-1}{x}-\frac{1}{x^2}+\frac{1}{x^3}+C\because\frac{d}{dx}\left(\frac-{1}{x}-\frac{1}{x^2}+\frac{1}{x^3}+C\right)=x^{-2}+2x^{-3}-3x^{-4}=\frac{x^2+2x-3}{x^4}
+\end{align}
+
+\vs\next
+32.\begin{align}
+    \set
+    &\int(1+3t)t^2dt\\
+    &=\int(t^2+3t^3)dt\\
+    &=\frac{1}{3}t^3+\frac{3}{4}t^4+C\because\frac{d}{dt}\left(\frac{1}{3}t^3+\frac{3}{4}t^4+C\right)=t^2+3t^3=(1+3t)t^2
+\end{align}
+
+\vs\next
+36.\begin{align}
+    \set
+    &\int(t^2-\cos t)dt\\
+    &=\frac{t^3}{3}-\sin t+C\because\frac{d}{dt}\left(\frac{t^3}{3}-\sin t+C\right)=t^2-\cos t
+\end{align}
+
+\vs\next
+40.\begin{align}
+    \set
+    &\int\sec y(\tan y-\sec y)dy\\
+    &=\int(\sec\tan y-\sec^2y)dy\\
+    &=\sec y-\tan y+C\because\frac{d}{dy}(\sec y-\tan y+C)=\sec y\tan y-\sec^2 y=\sec y(\tan y-\sec y)
+\end{align}
+
+\vs\next
+44.\begin{align}
+    \set
+    &\int\frac{\sin x}{1-\sin^2 x}dx\\
+    &=\int\frac{\sin x}{\cos^2 x}dx\\
+    &=\int\tan x\sec xdx\\
+    &=\sec x+C
+\end{align}
+
+\section{The graph of the derivative of a function is given. Sketch the graphs of two functions that have the given derivative.}
+46.\\\im{46.png}
+\begin{align}
+    \set
+    f'(x)&=x\\
+    f(x)&=\frac{x^2}{2}+C\therefore f(x)=\frac{x^2}{2}+1\,\, \frac{x^2}{2}
+\end{align}
+\im{46b.png}
+
+\section{Find the equation of $y$. given the derivative and the indicated point on the curve.}
+50.\[\frac{dy}{dx}=2(x-1)\]
+\im{50.png}
+\begin{align}
+    &=2x-2,\,\,(3, 2)\\
+    y&=\int2(x-1)dx\\
+    &=x^2-2x+C\\
+    2&=(3)^2-2(3)+C\Rightarrow C=-1\\
+    y&=x^2-2x-1
+\end{align}
+
+\section{A differential equation, a
+point, and a slope field are given. A slope field (or direction field)
+consists of line segments with slopes given by the differential
+equation. These line segments give a visual perspective of the
+slopes of the solutions of the differential equation. (a) Sketch
+two approximate solutions of the differential equation on the
+slope field, one of which passes through the indicated point. (b) Use integration to find the particular
+solution of the differential equation and use a graphing utility to
+graph the solution. Compare the result with the sketches in
+part (a).}
+
+52.\[\frac{dy}{dx}=x^2-1,\,\,(-1, 3)\]
+\im{52.png}
+\begin{enumerate}[(a)]
+    \item\im{52b.png}
+    \item\begin{align}
+        \set
+        \frac{dy}{dx}&=x^2-1,\,\,(-1, 3)\\
+        y&=\frac{x^3}{3}-x+C\\
+        3&=\frac{(-1)^3}{3}-(-1)+C\\
+        C&=\frac{7}{3}\\
+        y&=\frac{x^3}{3}-x+\frac{7}{3}
+    \end{align}
+\end{enumerate}
+
+54.\[\frac{dy}{dx}=-\frac{1}{x^2},\,\, x>0,\,\, (1, 3)\]
+\im{43b.png}
+\begin{enumerate}[(a)]
+    \item\im{54.png}
+    \item \begin{align}
+        \set
+        y&=\int-\frac{1}{x^2}dx\\
+        &=\int-x^{-2}dx\\
+        &=\frac{-x^{-1}}{-1}+C\\
+        &=\frac{1}{x}+C\\
+        3&=\frac{1}{1}+C\Rightarrow C=2\\
+        y&=\frac{1}{x}+2
+    \end{align}
+\end{enumerate}
+
+\section{(a) Use a graphing utility
+to graph a slope field for the differential equation, (b) use
+integration and the given point to find the particular solution of
+the differential equation, and (c) graph the solution and the
+slope field in the same viewing window.}
+56.\begin{align}
+    \set
+    \frac{dy}{dx}&=2\sqrt[]{x},\,\,(4, 12)\\
+    y&=\int 2x^{1/2}dx\\
+    &=\frac{4}{3}x^{3/2}+C\\
+    12&=\frac{4}{3}(4)^{3/2}+C\\
+    &=\frac{4}{3}(8)+C\\
+    &=\frac{32}{3}+C\Rightarrow C=\frac{4}{3}\\
+    y&=\frac{4}{3}x^{3/2}+\frac{4}{3}
+\end{align}
+
+\section{Solve the differential equation.}
+58.\begin{align}
+    \set
+    g'(x)&=6x^2,\,\, g(0)=-1\\
+    g(x)&=\int 6x^2dx=2x^3+C\\
+    g(0)&=-1=2(0)^3+C\Rightarrow C=-1\\
+    g(x)&=2x^3-1
+\end{align}
+
+\vs\next
+62.\begin{align}
+    \set
+    f''(x)&=x^2,\,\, f'(0)=8,\,\, f(0)=4\\
+    f'(x)&=\int x^2dx=\frac{1}{3}x^3+C_1\\
+    f'(0)&=0+C_1=8\Rightarrow C_1=8\\
+    f'(x)&=\frac{1}{3}x^3+8\\
+    f(x)&=\int\left(\frac{1}{3}x^3+8\right)dx=\frac{1}{12}x^4+8x+C_2\\
+    f(0)&=0+0+C_2=4\Rightarrow C_2=4\\
+    f(x)&\frac{1}{12}x^4+8x+4
+\end{align}
+
+\section{Capstone}
+70. Use the graph of $f'$ shown in the figure to answer the following, given that $f(0)=-4$.\\
+\im{70.png}\\
+\begin{enumerate}[(a)]
+    \item Approximate the slope of $f$ at $x=4$.
+    \begin{align}
+        \set
+        f'(4)\approx -1
+    \end{align}
+    \item Is it possible that $f(2)=-1$? Explain.\\
+    No because the tangent lines' slopes on [0, 2] are greater than 2, and $f$ would have to increase more than 4 on [0, 4].
+    \item Is $f(5)-f(4)>0$? Explain.
+    No because $f$ decreases on [4, 5].
+    \item Approximate the value of $x$ where $f$ is maximum. Explain.\\
+    $f$ is maximum at $x=3.5$ because $f'(3.5)=0$.
+    \item Approximate any intervals in which the graph of is
+    concave upward and any intervals in which it is concave
+    downward. Approximate the coordinates of any
+    points of inflection.\\
+    $f$ is concave upward when $f'$ increases on $(-\infty, 1$ and $(5, \infty)$. $f$ is concave downward on (1, 5). There are points of inflection at $x=1, 5$. 
+    \item Approximate the coordinate of the minimum of $f''(x)$.\\
+    $f''(x)$ is minimum at $x=3$.
+    \item Sketch an approximate graph of $f$.\\
+    \im{70b.png}
+\end{enumerate}
+
+\section{Vertical Motion. Use $a(t)=-32$ feet per
+second per second as the acceleration due to gravity. (Neglect
+air resistance.)}
+74. A balloon, rising vertically with a velocity of 16 feet per
+second, releases a sandbag at the instant it is 64 feet above the
+ground.
+\begin{enumerate}[(a)]
+    \item How many seconds after its release will the bag strike the
+    ground?
+        \begin{align}
+            \set
+            v_0&=16\text{ft}/\text{sec}\\
+            s_0&=64\text{ft}\\
+            s(t)&=-16t^2+16t+64=0\\
+            -16(t^2-t-4)&=0\\
+            t&=\frac{1+\sqrt[]{17}}{2}\approx 2.562\text{seconds}\\
+        \end{align}
+    \item At what velocitiy will it hit the ground?
+        \begin{align}
+            \set
+            v(t)&=s'(t)=-32t+16\\
+            v\left(\frac{1+\sqrt[]{17}}{2}\right)&=-32\left(\frac{1+\sqrt[]{17}}{2}\right)+16\\
+            &=-16\sqrt[]{17}\approx -65.970\text{ft/sec}
+        \end{align}
+\end{enumerate}
+
+\section{Vertical Motion. Use $a(t)=-9.8$ meters
+per second per second as the acceleration due to gravity.
+(Neglect air resistance.)}
+
+76. The Grand Canyon is 1800 meters deep at its deepest point. A
+rock is dropped from the rim above this point. Write the height
+of the rock as a function of the time $t$ in seconds. How long will
+it take the rock to hit the canyon floor?
+\begin{align}
+    \set
+    f(t)&=0=-4.9t^2+1800\\
+    4.9t^2&=1800\\
+    t^2&=\frac{1800}{4.9}\Rightarrow t\approx 9.2\text{seconds}
+\end{align}
+
+\section{Rectilinear Motion. Consider a particle
+moving along the $x$-axis where $x(t)$ is the position of the particle
+at time $t$, $x'(t)$ is its velocity, and $x''(t)$  is its acceleration.}
+
+82.\begin{enumerate}[(a)]
+    \item Find the velocity and acceleration of the particle.
+        \begin{align}
+            x(t)&=(t-1)(t-3)^2,\,\, 0\leq t\leq 5\\
+            &=t^3-7t^2+15-9\\
+            v(t)&=x'(t)=3t^2-14t+15=(3t-5)(t-3)\\
+            a(t)&=v'(t)=6t-14
+        \end{align}
+    \item Find the open intervals on which the particle is moving to
+    the right.
+        \begin{align}
+            v(y)>0\,\,\text{when}0<t<\frac{5}{3}\,\,\text{and}\,\, 3<t<5\\
+        \end{align}
+    \item Find the velocity of the particle when the acceleration is 0.
+        \begin{align}
+            a(t)&=6t-14=0\,\,\text{when}\,\, t=\frac{7}{3}\\
+            v(\frac{7}{3})&=\left(3\left(\frac{7}{3}\right)-5\right)\left(\frac{7}{3}-3\right)=2\left(-\frac{2}{3}\right)=-\frac{4}{3}
+        \end{align}
+\end{enumerate}
+
+\section{Rectilinear Motion. Consider a particle
+moving along the $x$-axis where $x(t)$ is the position of the particle
+at time $t$, $x'(t)$ is its velocity, and $x''(t)$ is its acceleration.}
+84. A particle, initially at rest, moves along the $x$-axis such that its acceleration at time $t>0$ is given by $a(t)=\cos t$. At the time $t=0$, its position $x=3$
+\begin{enumerate}[(a)]
+    \item Find the velocity and position functions for the particle.
+        \begin{align}
+            \set
+            a(t)&=\cos t\\
+            v(t)&=\int a(t)dt\\
+            &=\int\cos tdt\\
+            &=\sin t+C_1=\sin t\\
+            f(t)&=\int v(t)dt=\int\sin tdt=-\cos +C_2\\
+            f(0)&=3=-\cos(0)+C_2=-1+C_2\Rightarrow C_2=4\\
+            f(t)&=-\cos t+4
+        \end{align}
+    \item Find the values of $t$ for which the particle is at rest.
+        \begin{align}
+            \set
+            v(t)=0=\sin t,\,\, t=k\pi,\,\, k=0, 1, 2,...
+        \end{align}
+\end{enumerate}
+
+\section{Deceleration}
+86. A car traveling at 45 miles per hour is brought
+to a stop, at constant deceleration, 132 feet from where the
+brakes are applied.
+\begin{enumerate}[(a)]
+    \item How far has the car moved when its speed has been reduced
+    to 30 miles per hour?
+        \begin{align}
+            \set
+            v(0)&=45\text{mi/h}=66\text{ft/sec}\\
+            &30\text{mi/h}=44\text{ft/sec}\\
+            &15\text{mi/h}=22\text{ft/sec}\\
+            a(t)&=-a\\
+            v(t)&=-at+66\\
+            s(t)&=-\frac{a}{2}t^2+66t\\
+            v(t)&=0\,\,\text{after 132 ft}\\
+            -at+66&=0\,\,\text{when}\,\, t=\frac{66}{a}\\
+            s\left(\frac{66}{a}\right)&=-\frac{a}{2}\left(\frac{66}{a}\right)^2+66\left(\frac{66}{a}\right)\\
+            &=132\,\,\text{when}\,\, a=\frac{33}{2}=16.5\\
+            a(t)&=-16.5\\
+            v(t)&=-16.5t+66\\
+            s(t)&=-8.25t^2+66t
+            -16.5t+66&=44\\
+            t&=\frac{22}{16.5}\approx 1.333\\
+            s\left(\frac{22}{16.5}\right)&\approx 73.33
+        \end{align}
+    \item How far has the car moved when its speed has been reduced
+    to 15 miles per hour?
+        \begin{align}
+            \set
+            -16.5t+66&=22\\
+            t&=\frac{44}{16.5}\approx 2.667\\
+            s\left(\frac{44}{16.5}\right)&\approx 117.33
+        \end{align}
+    \item Draw the real number line from 0 to 132, and plot the points
+    found in parts (a) and (b). What can you conclude?
+        \im{86.png}\\
+        Less distance is needed to reach the next reduction of speed every time.
+\end{enumerate}
+
+\section{Determine whether the
+statement is true or false. If it is false, explain why or give an
+example that shows it is false.}
+
+90. Each antiderivative of an $n$th-degree polynomial function is an
+$(n+1)$th-degree polynomial function.
+\indent True.
+
+\vs\next
+91. If $p(x)$ is a polynomial function, then $p$ has exactly one
+antiderivative whose graph contains the origin.\\
+\indent True.
+
+\vs\next
+92. If $F(x)$ and $G(x)$ are antiderivatives of $f(x)$, then $F(x)=G(x)+C$.\\
+\indent True.
+
+\vs\next
+93. If $f'(x)=g(x)$, then $\int g(x)dx=f(x)_C$.\\
+\indent True.
+
+\vs\next
+94. $\int f(x)g(x)dx=\int f(x)dx\int g(x)dx$\\
+\indent False.
+\[\int x\cdot xdx\neq\int xdx\cdot\int xdx\because \frac{x^3}{3}+C\neq\left(\frac{x^2}{2}+C_1\right)\left(\frac{x^2}{2}+C_2\right)\]
+
+\vs\next
+95. The antiderivative of $f(x)$ is unique.\\
+\indent False. It has an infinite number of integrals, each being different by a constant.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

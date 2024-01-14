@@ -1,0 +1,154 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts, gensymb,  graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+\newcommand*{\im}{\includegraphics}
+\newcommand*{\lt}{\left}
+\newcommand*{\rt}{\right}
+
+\begin{document}
+
+\title{5.3 Inverse functions}
+\author{Juan J. Moreno Santos}
+\date{January 2024}
+
+\maketitle
+\section{The graph of the function with the
+graph of its inverse function. [The graphs of the inverse
+functions are labeled (a), (b), (c), and (d).]}
+\im{12.png}\\
+10 matches (b) and 12 matches (d)
+
+\section{Use a graphing utility to graph the function.
+Then use the Horizontal Line Test to determine whether the
+function is one-to-one on its entire domain and therefore has an
+inverse function.}
+16. $f(x)=\frac{x^2}{x^2+4}$\\
+\indent The function is not one-to-one and doesn't have an inverse.
+
+\section{Find the inverse function of $f$, (b) graph $f$ and $f^{-1}$ on the same set of coordinate axes, (c) describe the relationship between the graphs, and (d) state the domain and range of $f$ and $f^{-1}$.}
+28.\begin{align}
+    \set
+    f(x)=x^2&=y,\,\, x\geq 0\\
+    x&=\sqrt[]{y}\\
+    y&=\sqrt[]{y}\\
+    f^{-1}(x)&=\sqrt[]{x}
+\end{align}
+$f$ and $f^{-1}$ reflect each other on the line $y=x$. The domain and range of $f$ are $x\geq 0$ and $y\geq 0$ respectively, and the domain and range of $f^{-1}$ are $x\geq 0$ and $y\geq 0$ respectively.
+
+\section{Word problems}
+40. The formula $C=\frac{5}{9}(F-32)$, where $F\geq 459.6$, represents Celsius temperature $C$ as a function of Fahrenheit temperature $F$.
+\begin{enumerate}[(a)]
+    \item Find the inverse function of C
+        \begin{align}
+            \set
+            \frac{9}{5}&F-32\\
+            F=32+\frac{9}{5}C
+        \end{align}
+    \item What does the inverse function represent?
+        \indent It represents the temperature conversion from degrees Celsius to Fahrenheit.
+    \item What is the domain of the inverse function> Validate or explain your answer using the context of the problem.
+        \begin{align}
+            \set
+            F\geq -459.6,\,\, C=\frac{5}{9}(F-32)\geq -273.11
+            \therefore\text{Domain:} C\geq -273.1=-273\frac{1}{9}
+        \end{align}
+    \item The temperature is 22\degree C. What is the corresponding temperature in degrees Fahrenheit?
+        \begin{align}
+            \set
+            F=32+\frac{9}{5}(22)=71.6\degree F
+        \end{align}
+\end{enumerate}
+
+\section{Use the derivative to determine whether the
+function is strictly monotonic on its entire domain and therefore
+has an inverse function.}
+42.\begin{align}
+    \set
+    f(x)&=x^3-6x^2+12x\\
+    f'(x)&=3x^2-12x+12=3(x-2)^2
+\end{align}
+$f$ is strictly monotonic and has an inverse because it's increasing on $(-\infty,\,\infty)$.
+
+46.\begin{align}
+    \set
+    f(x)&=\cos\frac{3x}{2}\\
+    f'(x)&=-\frac{3}{2}\sin\frac{3x}{2}=0\,\,\text{when}\,\, x=0,\,\frac{2\pi}{3},\,\frac{4\pi}{3},\cdots
+\end{align}
+
+\section{Determine whether the functions is one-to-one. If it is, find its inverse function.}
+60. $f(x)=-3$\\
+\indent Doesn't have an inverse since it's not one-to-one.
+
+\vs\next
+62.\begin{align}
+    \set
+    f(x)&=ax+b
+\end{align}
+$f$ is one-to-one and has an inverse.
+\begin{align}
+    \set
+    ax+b&=y\\
+    x&=\frac{y-b}{a}\\
+    y&=\frac{x-b}{a}
+\end{align}
+
+\section{Delete part of the domain so that the
+function that remains is one-to-one. Find the inverse function of
+the remaining function and give the domain of the inverse
+function.}
+64.\begin{align}
+    \set
+    f(x)&=16-x^4\,\,\text{will be one-to-one for}\,\, x\geq 0\\
+    16-x^4&=y\\
+    16-y&=x^4\\
+    \sqrt[4]{16-y}&=x^4\\
+    \sqrt[4]{16-x}&=y\\
+    f^{-1}(x)&=\sqrt[4]{16-x},\,\, x\leq 16
+\end{align}
+\im{64.png}
+
+\section{Decide whether the function has an inverse function. If so, what is the inverse function?}
+68. $h(t)$ is the height of the tide $t$ hours after midnight, where $0\leq t\leq 24$.\\
+\indent The function doesn't have an inverse because there could be two times $t_1\neq t_2$ for which $h(t_1)=h(t_2)$.
+
+70. $A(r)$ is the area of a circle of radius $r$.\\
+\indent Yes. The function is one-to-one since it's increasing. Its inverse yields the radius $r$ that corresponds to the area A.
+
+\section{Verify that $f$ has an inverse. Then use the function $f$ and the given real number $a$ to find $(f^{-1})'(a)$.}
+72.\begin{align}
+    \set
+    f(x)&=5-2x^3,\,\, a=7\\
+    f'(x)&=-6x^2
+\end{align}
+$f$ is decreasing on $(-\infty,\,\,\infty)$. Therefore, $f$ has an inverse and is monotonic.\\
+\begin{align}
+    f(-1)&=7\Rightarrow f^{-1}(7)=-1\\
+    (f^{-1})'(7)&=\frac{1}{f'(f^{-1}(7))}=\frac{1}{f'(-1)}=\frac{1}{-6(-1)^2}=\frac{-1}{6}
+\end{align}
+
+\vs\next
+76.\begin{align}
+    \set
+    f(x)&=\cos 2x,\,\, a=1,\,0\leq x\leq\frac{\pi}{2}\\
+    f'(x)&=-2\sin 2x<0\,\,\text{on}\,\, (0,\,\frac{\pi}{2})
+\end{align}
+$f$ has an inverse since it's monotonic on $[0,\,\frac{\pi}{2}]$.
+\begin{align}
+    f(0)&=1\Rightarrow f^{-1}(1)=0\\
+    (f^{-1})'(1)&=\frac{1}{f'(f^{-1}(1))}=\frac{1}{f'(0)}=\frac{1}{-2\sin 0}=\frac{1}{0}=\text{undefined}
+\end{align}
+
+\vs\next
+80.\begin{align}
+    \set
+    f(x)&=\sqrt[]{x-4},\,\, a=2,\, x\geq 4\\
+    f'(x)&=\frac{1}{2\sqrt[]{x-4}}>0\,\,\text{on}\,\, (4,\,\infty)
+\end{align}
+$f$ has an inverse since it's monotonic on [4, $\infty$]
+
+
+\end{document}

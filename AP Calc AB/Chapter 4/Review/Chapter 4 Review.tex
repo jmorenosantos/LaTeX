@@ -1,0 +1,169 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts,  graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+\newcommand*{\im}{\includegraphics}
+\newcommand*{\lt}{\left}
+\newcommand*{\rt}{\right}
+
+\begin{document}
+
+\title{Chapter 4 Review}
+\author{Juan J. Moreno Santos}
+\date{December 2023}
+
+\maketitle
+
+\section{Free Response}
+\subsection{4.1 Antiderivatives and Indefinite Integration - p.257}
+71. A ball is thrown vertically upward from a height of 6 feet with an
+initial velocity of 60 feet per second. How high will the ball go? Use $a(t)=-32$ feet per
+second per second as the acceleration due to gravity. 
+
+\begin{align}
+    \set
+    h(t)&=\frac{1}{2}at^2+v_0t+h_0\\
+    \int a(t)&=\int -32\\
+    v(t)&=-32t+C\\
+    60&=-32(0)+C\\
+    v(t)&=-32t+60\\
+    h(t)&=\frac{1}{2}(-32)t^2+60t+C\\
+    6&=\frac{1}{2}(-32)(0)^2+60(0)+C\\
+    \therefore h(t)&=\frac{1}{2}(-32)t^2+(60)t+6
+\end{align}
+Remember that $x=t=\frac{-b}{2a}$ can be used. With the t-value, we can calculate the max height.
+The maximum height is 62.25.
+
+\vs\next
+77. A baseball is thrown upward from a height of 2 meters with
+an initial velocity of 10 meters per second. Determine its
+maximum height. Use $a(t)=-9.8$ meters
+per second per second as the acceleration due to gravity.
+(Neglect air resistance.)
+\begin{align}
+    \set
+    y&=\frac{1}{2}(-9.8)t^2+10t+2\\
+    x&\frac{-b}{2a}=\frac{-10}{2(-4.9)}=1.02
+\end{align}
+Let $t=1.02$. The maximum height is 7.1m.
+
+\subsection{4.2 Area - p.268}
+37. Find the limit of $s(n) as n\to\infty$.
+\begin{align}
+    \set
+    s(n)&=\frac{81}{n^4}\lt(\frac{n^2(n+1)^2}{4}\rt)\\
+    \lim_{n\to\infty}\frac{81}{n^4}\lt(\frac{n^2(n+1)^2}{4}\rt)&=\lim_{n\to\infty}\frac{81n^4+162n^3+81n^2}{4n^4}\lt(\frac{\frac{1}{n^4}}{\frac{1}{n^4}}\rt)\\
+    &=\lim_{n\to\infty}\frac{81+\frac{162}{n}}+\frac{81}{n^2}\\
+    &=\frac{81}{4}
+\end{align}
+
+\subsection{4.3 Riemann Sums and Definite Integrals - p.279}
+41. Given $\int_{0}^{5}f(x)dx=10$ and $\int_{5}^{7}f(x)dx=3$, evaluate
+\begin{enumerate}[(a)]
+    \item
+        \begin{align}
+            \set
+            \int_{0}^{7}f(x)dx=13
+        \end{align}    
+    \item
+        \begin{align}
+            \set
+            \int_{5}^{0}f(x)dx=-10
+        \end{align}
+    \item
+        \begin{align}
+            \set
+            \int_{5}^{5}f(x)dx=0
+        \end{align}
+    \item
+        \begin{align}
+            \set
+            \int_{0}^{5}3f(x)dx=30
+        \end{align}
+\end{enumerate}
+
+42. Given $\int_{0}^{3}f(x)dx=4$ and $\int_{3}^{6}f(x)=-1$ evaluate
+\begin{enumerate}[(a)]
+    \item
+        \begin{align}
+            \set
+            \int_{0}^{6}f(x)dx=3
+        \end{align}
+    \item
+        \begin{align}
+            \set
+            \int_{6}^{3}f(x)dx=-1
+        \end{align}
+    \item
+        \begin{align}
+            \set
+            \int_{3}^{3}f(x)dx=0
+        \end{align}
+    \item
+        \begin{align}
+            \set
+            \int_{3}^{6}-5f(x)dx=5
+        \end{align}
+\end{enumerate}
+
+\subsection{4.4 The Fundamental Theorem of Calculus - p.293}
+46. Find the value(s) of $c$ guaranteed by the
+Mean Value Theorem for Integrals for the function over the
+given interval.
+\begin{align}
+    \set
+    f(x)&=\frac{9}{x^3},\,\,\,[1, 3]\\
+\end{align}
+Remember that the average height of a function on an interval is given by
+\begin{align}
+    \frac{1}{b-a}\int_{a}^{b}f(x)dx=f(c)\\
+\end{align} 
+Therefore,
+\begin{align}
+    &\frac{1}{2}\int_{1}^{3}9x^{-3}dx\\
+    &=\frac{9}{2}\cdot\frac{x^{-2}}|_1^3\\
+    &=-\frac{9}{4}(3)^{-2}-\lt(-\frac{9}{4}(1)^{-2}\rt)\\
+    &=\frac{1}{4}+\frac{9}{4}=\frac{8}{4}=2
+\end{align}
+Finding c:
+\begin{align}
+    2&=\frac{9}{c^3}\\
+    2c^3&=9\\
+    c^3&=4.5\\
+    c&=\sqrt[3]{4.5}
+\end{align}
+
+\subsection{4.5 Integration by Substitution - p.306}
+41. Solve the differential equation\\
+1. Start by separating the integral
+\begin{align}
+    \set
+    \frac{dy}{dx}&=\frac{x+1}{(x^2+2x-3)^2}\\
+    dy&=\frac{x+1}{(x^2+2x-3)^2}dx\\
+\end{align}
+
+2. Integrate
+\begin{align}
+    \set
+    \int dy&=\int \frac{x+1}{(x^2+2x-3)^2}dx,\,\,\, u=x^2+2x-3,\,\,\, du=2x+2dx\therefore \frac{1}{2}du=x+1dx\\
+    y&=\frac{1}{2}\int\lt(\frac{1}{u^2}\rt)du\\
+    &=\int u^{-2}du\\
+    &=-\frac{1}{2}u^{-1}+C\\
+    &=-\frac{1}{2(x^2+2x-3)}+C
+\end{align}
+
+\subsection{4.6 Numerical Integration - p. 316}
+8. Use the Trapezoidal Rule to approximate the value of the definite integral for the given
+value of $n$ Round your answer to four decimal places and
+compare the results with the exact value of the definite integral.
+\begin{align}
+    \set
+    &\int_{1}^{4}(4-x^2)dx,\,\,\, n=6\\
+    &=\frac{4-1}{2(6)}(f(1)+2f(\frac{3}{2})+2f(2)+2\frac{5}{2}+2f(3)+2f(\frac{7}{2})+f(4))\\
+    &=-9
+\end{align}
+
+\end{document}

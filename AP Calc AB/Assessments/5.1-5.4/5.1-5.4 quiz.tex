@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts, gensymb, graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+\newcommand*{\im}{\includegraphics}
+\newcommand*{\lt}{\left}
+\newcommand*{\rt}{\right}
+
+\begin{document}
+
+\title{5.1 - 5.4 quiz}
+\author{Juan J. Moreno Santos}
+\date{January 2024}
+
+\maketitle
+\section{Bleh}
+
+1.\begin{align}
+    \set
+    &\frac{dy}{dx}(\ln(\ln x^{12}))\\
+    &=\frac{1}{ln(x^{12})}\frac{d}{dx}(\ln(x^{12}))\\
+    &=\frac{1}{ln(x^{12})}\cdot\frac{12}{x}\\
+    &=\frac{12}{x\ln(x^{12})}
+\end{align}
+
+2.x-coordinate(s) of any relative extrema and inflection points of the function $y=x^5\ln(\frac{x}{9})$.
+
+
+
+3.The relationship between the number of decibels $\beta$ and the intensity $I$ of sound in watts per centimeter squared is 
+$\beta=10\log_{10}\lt(\frac{I}{10^{-16}}\rt)$ Determine the number of decibels of a sound with an intensity of $10^{-9}$ watts per square centimeter.
+\begin{align}
+    \set
+    &\beta=10\log_{10}\lt(\frac{I}{10^{-16}}\rt)\\
+    &=\frac{10}{\ln 10}(\ln I+16\ln 10)\\
+    &=160+10\log_{10}I\\
+    \beta(10^{-10})&=\frac{10}{\ln 10}(\ln 10^{-9}+16\ln 10)\\
+    &=\frac{10}{\ln 10}(-9\ln 10+16\ln 10)\\
+    &=\frac{10}{\ln 10}(7\ln 10)\\
+    &=70\,\,\text{decibels}
+\end{align}
+
+4.\begin{align}
+    \set
+    &\int\frac{x^2+16x=6}{x^3+24x^2+18x-1}dx,\,\, u=x^3+24x^2+18x-1,\,\,  \frac{du}{3}=\frac{3x^2+48x+18-1dx}{3}=x^2+16+6dx\\
+    &=\int\frac{1}{u}\frac{du}{3}\\
+    &=\frac{1}{3}\int\frac{1}{u}du
+    &=ln|u|+C
+\end{align}
+
+5.\begin{align}
+    \set
+    df
+\end{align}
+
+5.\begin{align}
+    \set
+    df
+\end{align}
+
+7.Use the Horizontal Line Test to determine whether the following statement is true or false.
+The function is one-to-one on its entire domain and therefore has an inverse function.\\
+\indent True.
+
+9.\begin{align}
+    \set
+    f(x)&=x+2,\,\, g(x)=4x-7\\
+    &(g^{-1}\cdot f^{-1})(x)\\
+    &=
+\end{align}
+
+10.\begin{align}
+    \set
+    y&=x^5e^{x^9}\\
+    \frac{dy}{dx}&=
+\end{align}
+
+12.\begin{align}
+    \set
+    &\int_{1}^{7}\frac{e^{7\sqrt[]{x}}}{\sqrt[]{x}}dx,\,\, u=7\sqrt[]{x},\,\, du=\frac{7}{2\sqrt[]{x}}dx\\
+\end{align}
+
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts,  graphicx, enumerate, float, wrapfig}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+
+\begin{document}
+
+\title{Notes - Chapter 3 Review}
+\author{Juan J. Moreno Santos}
+\date{November 2023}
+
+\maketitle
+
+\section{Warm-up}
+1. Let $f(x)=\frac{1}{k}\cos (kx)$. For what value of $k$ does $f$ have a period of 3?\\
+Consider the basic form of a sinusoidal function:
+\[y=A\sin (B(x-C))+D\]
+Remember that the period of a sinusoidal is given by:
+\begin{align}
+    Period&=\frac{2\pi}{b},\,\,\,\, b=k\\
+    &=3
+\end{align}
+Solving for k:
+\begin{align}
+    k&=\frac{2\pi}{3}
+\end{align}
+\next
+2. The slope of the tangent line to the curve $f(x)=xy^3+y^2x^2=6$ at (2, 1) is:
+\begin{align}
+    \set
+    f'(x)&=y^3dx+x3y^2dy+2yx^2dy+2xy^2dx=0\\
+    &3xy^2dy+2yx^2dy=-2xy^2dx-y^3dx\\
+    &=\frac{-(2xy^2+y^3)}{3xy^2+2yx^2}
+\end{align}
+At (2, 1), the slope is
+\begin{align}
+    &=\frac{-(2(2)(1)^2)+(1)^3}{3(2)(1)^2+2(1)(2)^2}\\
+    &=\frac{-5}{14}
+\end{align}
+
+
+\section{Chapter 3 Review - Free Response}
+\subsection{1. p186 33, p242 24, p244 78 (identify increasing and decreasing intervals)}
+
+
+
+
+\subsection{p187 }
+\section{Chapter 3 Review - Multiple Choice}
+\subsection{16. p241 34}
+The total stopping distance $T$ of a vehicle is $T=2.5x+0.5x^2$ where $T$ is in feet and $x$ is the speed in miles per hour. Approximate the change and percent change in total stopping distance as speed changes from $x=25$ to $x=26$ miles per hour.
+\begin{enumerate}
+    \item $\Delta x=dx=26-25=1$
+    \item x=25
+\end{enumerate}
+\begin{align}
+    f(x+\Delta x)&\approx f(x)+f'(x)\Delta x\\
+    dT&=(2.5+x)dx=(2.5+25)(1)=27.5mi\\
+    \text{Percentage change}&=\frac{dT}{T}=\frac{27.5}{375}\approx 7.3\%
+\end{align}
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,154 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts,  graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+
+\begin{document}
+
+\title{Convert Computer MAC Addresses to IPv6 EUI-64 Addresses}
+\author{Juan J. Moreno Santos}
+\date{December 7 2023}
+
+\maketitle
+\section{Using the six (fake) MAC addresses below, convert each from a 48-bit MAC address to a 64-bit (EUI-64) address.}
+1. C9:2C:BF:7A:D5:DD\\
+\indent In detail, the steps implemented in each exercise are the following:
+\begin{enumerate}[i.]
+    \item Split the MAC address into two 3-byte (24-bit) halves:
+        \begin{align}
+            \set
+            \text{C9:2C:BF:7A:D5:DD} =\text{C9:2C:BF and 7A:D5:DD}
+        \end{align}
+    \item Add FFFE, the missing 16 bits, in the middle:
+        \begin{align}
+            \text{C9:2C:BF:FF:FE:7A:D5:DD}
+        \end{align}
+    \item Format in IPv6 notation, dividing the address into four hexadecimal bits:
+        \begin{align}
+            \text{C92C:BFFF:FE7A:D5DD}
+        \end{align}
+    \item Convert the first octet (C9 in this case) from hexadecimal to binary:
+        \begin{align}
+            \text{C9}=1100\,\,\text{and}\,\, 1001=11001001
+        \end{align}
+    \item Invert the seventh bit:
+        \begin{align}
+            11001001\Rightarrow 11001011
+        \end{align}
+    \item Convert the octet from binary back into hexadecimal:
+        \begin{align}
+            11001011=CB
+        \end{align}
+    \item Replace the first octet with the converted one:
+        \begin{align}
+            \text{C92C:BFFF:FE7A:D5DD}\Rightarrow \text{CB2C:BFFF:FE7A:D5DD}
+        \end{align}
+    \item Add fe80:: to the beginning of the address, and write it in lowercase:
+        \begin{align}
+            \lowercase\text{FE80::CB2C:BFFF:FE7A:D5DD}
+        \end{align}
+\end{enumerate}
+
+\newpage\next
+2. 08:9C:FD:C3:39:ED
+\begin{align}
+    \set
+    &\text{08:9C:FD:C3:39:ED = 08:9C:FD and C3:39:ED}\\
+    &\text{08:9C:FD:FF:FE:C3:39:ED}\\
+    &\text{089C:FDFF:FEC3:39ED}\\
+    &08=00001000\\
+    &00001000\Rightarrow 00001010\\
+    &00001010=\text{0A}\\
+    &\text{089C:FDFF:FEC3:39ED}\Rightarrow\text{0A9C:FDFF:FEC3:39ED}\\
+    &\lowercase\text{FE80::0A9C:FDFF:FEC3:39ED}
+\end{align}
+
+\vs\next
+3. 5E:9D:8F:CF:3A:FE
+\begin{align}
+    \set
+    &\text{5E:9D:8F:CF:3A:FE = 5E:9D:8F and CF:3A:FE}\\
+    &\text{5E:9D:8F:FF:FE:CF:3A:FE}\\
+    &\text{5E9D:8FFF:FECF:3AFE}\\
+    &\text{5E}=01011110\\
+    &01011110\Rightarrow 1011100\\
+    &1011100=\text{5C}\\
+    &\text{5E9D:8FFF:FECF:3AFE}\Rightarrow\text{5C9D:8FFF:FECF:3AFE}\\
+    &\lowercase\text{FE80::5C9D:8FFF:FECF:3AFE}
+\end{align}
+
+\vs\next
+4. BB:65:FD:22:FB:68
+\begin{align}
+    \set
+    &\text{BB:65:FD:22:FB:68 = BB:65:FD and 22:FB:68}\\
+    &\text{BB:65:FD:FF:FE22:FB:68}\\
+    &\text{BB65:FDFF:FE22:FB68}\\
+    &\text{BB}=10111011\\
+    &10111011\Rightarrow 10111001\\
+    &10111001=\text{B9}\\
+    &\text{BB65:FDFF:FE22:FB68}\Rightarrow\text{B965:FDFF:FE22:FB68}\\
+    &\lowercase\text{FE80::B965:FDFF:FE22:FB68}
+\end{align}
+
+\vs\next
+5. 96:41:FD:C3:C1:C5
+\begin{align}
+    \set
+    &\text{96:41:FD:C3:C1:C5 = 96:41:FD and C3:C1:C5}\\
+    &\text{96:41:FD:FF:FE:C3:C1:C5}\\
+    &\text{9641:FDFF:FEC3:C1C5}\\
+    &\text{96}=10010110\\
+    &10010110\Rightarrow 10010100\\
+    &10010100=\text{94}\\
+    &\text{9641:FDFF:FEC3:C1C5}\Rightarrow\text{9441:FDFF:FEC3:C1C5}\\
+    &\lowercase\text{FE80::9441:FDFF:FEC3:C1C5}
+\end{align}
+
+\vs\next
+6. AB:79:B0:CA:F7:BF
+\begin{align}
+    \set
+    &\text{AB:79:B0:CA:F7:BF = AB:79:B0 and CA:F7:BF}\\
+    &\text{AB:79:B0:FF:FE:CA:F7:BF}\\
+    &\text{AB79:B0FF:FECA:F7BF}\\
+    &\text{AB}=10101011\\
+    &10101011\Rightarrow 10101001\\
+    &10101001=\text{A9}\\
+    &\text{AB79:B0FF:FECA:F7BF}\Rightarrow\text{A979:B0FF:FECA:F7BF}\\
+    &\lowercase\text{FE80::A979:B0FF:FECA:F7BF}
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

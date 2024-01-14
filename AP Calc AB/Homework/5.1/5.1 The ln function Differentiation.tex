@@ -1,0 +1,373 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts,  graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+\newcommand*{\im}{\includegraphics}
+\newcommand*{\lt}{\left}
+\newcommand*{\rt}{\right}
+
+\begin{document}
+
+\title{5.1 The Natural Logarithmic Function: Differentiation}
+\author{Juan J. Moreno Santos}
+\date{January 2024}
+
+\maketitle
+\section{Use a graphing utility to evaluate the
+logarithm by (a) using the natural logarithm key and (b) using
+the integration capabilities to evaluate the integral $\int_{1}^{x}(\frac{1}{t})dt$}
+\begin{enumerate}[(a)]
+    \item
+        \begin{align}
+            \set
+            \ln 8.3\approx 2.1163\\
+            \int_{1}^{8.3}\frac{1}{t}dt\approx 2.1163
+        \end{align}
+    \item
+        \begin{align}
+            \set
+            \ln 0.6\approx -0.5108\\
+            \int_{1}^{0.6}\frac{1}{t}dt\approx -0.5108
+        \end{align}
+\end{enumerate}
+
+\section{Match the function with its graph.}
+\im{8.png}
+8.\begin{align}
+    \set
+    f(x)=-\ln x
+\end{align}
+Matches (d) since the graph reflects the x-axis
+
+\vs\next
+10.\begin{align}
+    \set
+    f(x)=-\ln(-x)
+\end{align}
+Matches (c) since the graph reflects both axes.
+
+\section{Sketch the graph of the function and state its domain.}
+12.$f(x)=-2\ln x$\\
+Domain: $x>0$\\
+\im{12.png}\\
+
+\vs\next
+16.$g(x)=2+\ln x$\\
+Domain: $x>0$\\
+\im{16.png}
+
+\section{In Exercises 19 and 20, use the properties of logarithms to
+approximate the indicated logarithms, given that $\ln 2\approx 0.6931$ and $\ln 3\approx 1.0986$.}
+20.\begin{enumerate}[(a)]
+    \item
+        \begin{align}
+            \set
+            &\ln 0.25\\
+            &=\ln\frac{1}{4}\\
+            &=\ln 1-\ln 2\ln 2\approx -1.3682
+        \end{align}
+    \item
+        \begin{align}
+            \set
+            &\ln 24\\
+            &=3\ln 2+\ln 3\approx 3.1779
+        \end{align}
+    \item
+        \begin{align}
+            \set
+            &\ln\sqrt[3]{12}\\
+            &=\frac{1}{3}(2\ln 2+\ln 3)\approx 0.8283
+        \end{align}
+    \item
+        \begin{align}
+            \set
+            &\ln\frac{1}{72}\\
+            &=\ln 1-(3\ln 2+2\ln 3)\approx -4.2765
+        \end{align}
+\end{enumerate}
+
+\section{Use the properties of logarithms to expand
+the logarithmic expression.}
+22.\begin{align}
+    \set
+    &\ln\sqrt[]{x^5}\\
+    &=\ln x^{\frac{5}{2}}=\frac{5}{2}\ln x
+\end{align}
+
+\vs\next
+26.\begin{align}
+    \set
+    &\ln\sqrt[]{a-1}\\
+    &=\ln(a-1)^{\frac{1}{2}}=\lt(\frac{1}{2}\rt)\ln(a-1)
+\end{align}
+
+\vs\next
+28.\begin{align}
+    \set
+    &\ln 3e^2\\
+    &=\ln 3+2\ln e=2+\ln 3
+\end{align}
+
+\section{Write the expression as a logarithm of a
+single quantity.}
+32.\begin{align}
+    \set
+    &3\ln x+2\ln y-4\ln z\\
+    &=\ln x^3+\ln y^2-\ln z^4\\
+    &=\ln\frac{x^3y^2}{z^4}
+\end{align}
+
+\vs\next
+34.\begin{align}
+    \set
+    &2(\ln x-\ln(x+1)-\ln(x-1))\\
+    &=2\ln\frac{x}{(x+1)(x-1)}\\
+    &=\ln\lt(\frac{x}{x^2-1}\rt)^2
+\end{align}
+
+\section{(a) Verify that $f=g$ by using a graphing utility to graph $f$ and $g$ in the same viewing window and (b) verify that $f=g$ algebraically.}
+38.\begin{align}
+    \set
+    f(x)&=\ln\sqrt[]{x(x^2+1)}\\
+    &=\frac{1}{2}\ln(x(x^2+1))\\
+    &=\frac{1}{2}(\ln x+\ln(x^2+1))=g(x)
+\end{align}
+
+\section{Find the limit.}
+42.\begin{align}
+    \set
+    &\lim_{x\to 5^+}\ln\frac{x}{\sqrt[]{x-4}}\\
+    &=\ln 5\approx 1.61
+\end{align}
+
+\section{Find an equation of the tangent line to the
+graph of the logarithmic function at the point (1, 0).}
+44.\begin{align}
+    \set
+    y&=\ln x^{\frac{3}{2}}=\frac{3}{2}\ln x\\
+    y'&=\frac{3}{2x}
+\end{align}
+The slope at (1, 0) is $\frac{3}{2}$, and the tangent line is:
+\begin{align}
+    \set
+    y-0&=\frac{3}{2}(x-1)\\
+    y&=\frac{3}{2}x-\frac{3}{2}
+\end{align}
+
+\section{Find the derivative of the function.}
+48.\begin{align}
+    \set
+    f(x)&=\ln(x-1)\\
+    f'(x)&=\frac{1}{x-1}
+\end{align}
+
+\vs\next
+52.\begin{align}
+    \set
+    y&=x^2\ln x\\
+    y'&=x^2\lt(\frac{1}{x}\rt)+2x\ln x\\
+    &=x+2x\ln x\\
+    &=x(1+2\ln x)
+\end{align}
+
+\vs\next
+56.\begin{align}
+    \set
+    y&=\ln(t(t^2+3)^3)\\
+    &=\ln t+3\ln(t^2+3)\\
+    y'&=\frac{1}{t}+\frac{2}{t^2+3}(2t)\\
+    &=\frac{1}{t}+\frac{6t}{t^2+3}
+\end{align}
+
+\vs\next
+60.\begin{align}
+    \set
+    h(t)&=\frac{\ln t}{t}\\
+    h'(t)&=\frac{t\lt(\frac{1}{t}\rt)-\ln t}{t^2}\\
+    &=\frac{1-\ln t}{t^2}
+\end{align}
+
+\vs\next
+64.\begin{align}
+    \set
+    y&=\ln\sqrt[3]{\frac{x-1}{x+1}}\\
+    &=\frac{1}{3}(\ln(x-1)-\ln(x+1))\\
+    y'&=\frac{1}{3}\lt(\frac{1}{x-1}-\frac{1}{x+1}\rt)\\
+    &=\frac{1}{3}\cdot\frac{2}{x^2-1}\\
+    &=\frac{2}{3(x^2-1)}
+\end{align}
+
+\vs\next
+68.\begin{align}
+    \set
+    y&=\frac{-\sqrt[]{x^2+4}}{x}-\frac{1}{4}\ln\lt(\frac{2+\sqrt[]{x^2+4}}{x}\rt)\\
+    &=\frac{-\sqrt[]{x^2+4}}{2x^2}-\frac{1}{4}\ln(2+\sqrt[root]{x^2+4})+\frac{1}{4}\ln x\\
+    \frac{dy}{dx}&=\frac{-2x^2(\frac{x}{\sqrt[]{x^2+4}})+4x\sqrt[]{x^2+4}}{4x^4}-\frac{1}{4}\lt(\frac{1}{2+\sqrt[]{x^2+4}}\rt)\lt(\frac{x}{\sqrt[]{x^2+4}}\rt)+\frac{1}{4}\ln x\\
+    &=\frac{-1}{2x\sqrt[]{x^2+4}}+\frac{\sqrt[]{x^2+4}}{x^3}-\frac{1}{4}\cdot\frac{(2-\sqrt[]{x^2+4})}{-x^2}\lt(\frac{x}{\sqrt[]{x^2+4}}\rt)+\frac{1}{4x}\\
+    &=\frac{-1+\lt(\frac{1}{2}\rt)(2-\sqrt[]{x^2+4})}{2x\sqrt[]{x^2+4}}+\frac{\sqrt[]{x^2+4}}{x^3}+\frac{1}{4x}\\
+    &=\frac{-\sqrt[]{x^2+4}}{4x\sqrt[]{x^2+4}}+\frac{\sqrt[]{x^2+4}}{x^3}+\frac{1}{4x}\\
+    &=\frac{\sqrt[]{x^2+4}}{x^3}
+\end{align}
+
+\vs\next
+72.\begin{align}
+    \set
+    y&=\ln|\sec x+\tan x|\\
+    \frac{dy}{dx}&=\frac{\sec x\tan+\sec^2x}{\sec x+\tan x}\\
+    &=\frac{\sec x(\sec x+\tan x)}{\sec x+\tan x}\\
+    &=\sec x
+\end{align}
+
+\vs\next
+76.\begin{align}
+    \set
+    g(x)&=\int_{1}^{\ln x}(t^2+3)dt\\
+    g'(x)&=((\ln x)^2+3)\frac{d}{dx}(\ln x)\\
+    &=\frac{(\ln x)^2+3}{x}
+\end{align}
+
+\section{Find an equation of the tangent line to
+the graph of at the given point.}
+78.\begin{align}
+    \set
+    f(x)&=3x^2-\ln x,\,\, (0, 4)\\
+    \frac{dy}{dx}&=-2x-\frac{1}{\lt(\frac{1}{2}\rt)x+1}\lt(\frac{1}{2}\rt)\\
+    &=-2x-\frac{1}{x+2}\\
+    \frac{dy}{dx}&=-\frac{1}{2}\,\,\text{when}\,\, x=0\\
+    y-4&=-\frac{1}{2}(x-0)\\
+    y&=-\frac{1}{2}x+4
+\end{align}
+
+\vs\next
+82.\begin{align}
+    \set
+    f(x)&=\frac{1}{2}x\ln(x^2),\,\, (-1, 0)\\
+    f'(x)&=\frac{1}{2}\ln(x^2)+\frac{1}{2}\lt(\frac{2x}{x^2}\rt)\\
+    &=\frac{1}{2}\ln(x^2)+1\\
+    f'(-1)&=1\\
+    y-0&=1(x+1)\\
+    y&=x+1
+\end{align}
+
+\section{Use implicit differentiation to find $\frac{dy}{dx}$}
+84.\begin{align}
+    \set
+    \ln(xy)+5x&=30\\
+    \ln x+\ln y+5x&=30\\
+    \frac{1}{x}+\frac{1}{y}\cdot\frac{dy}{dx}+5&=0\\
+    \frac{1}{y}\cdot\frac{dy}{dx}&=\frac{1}{x}-5\\
+    \frac{dy}{dx}&=-\frac{y}{x}-5y\\
+    &=-\lt(\frac{y+5xy}{x}\rt)
+\end{align}
+
+86.\begin{align}
+    \set
+    4xy+\ln x^2y&=7\\
+    4xy+2\ln x+\ln y&=7\\
+    4xy'+4y+\frac{2}{x}+\frac{1}{y}y'&=0\\
+    \lt(4x+\frac{1}{y}\rt)y'&=-4y-\frac{2}{x}\\
+    y'&=\frac{-4y-\frac{2}{x}}{4x+\frac{1}{y}}\\
+    &=\frac{-4xy^2-2y}{4x^2y+x}
+\end{align}
+
+\section{Locate any relative extrema and inflection
+points.}
+92.\begin{align}
+    \set
+    y&=x-\ln x\\
+    \text{Domain:}\,\,&x>0\\
+    y'&=1-\frac{1}{x}=0\,\,\text{when}\,\, x=1\\
+    y''&=\frac{1}{x^2}>0
+\end{align}
+Relative minimum at (1, 1).\\
+
+\vs\next
+96.\begin{align}
+    \set
+    y&=x^2\ln\frac{x}{4},\,\,\text{Domain:}\,\, x>0\\
+    y'&=x^2\lt(\frac{1}{x}\rt)+2x\ln\frac{x}{4}=x\lt(1+2\ln\frac{x}{4}\rt)=0\,\,\text{when:}\\
+    -1&=2\ln\frac{x}{4}\Rightarrow\ln\frac{x}{4}=-\frac{1}{2}\Rightarrow x=4e^{-\frac{1}{2}}\\
+    y''&=1+2\ln\frac{x}{4}+2x\lt(\frac{1}{x}\rt)=3+2\ln\frac{x}{4}\\
+    y''&=0\,\,\text{when}\,\, x=4e^{-\frac{3}{2}}
+\end{align}
+Relative minimum at $(4e^{-\frac{1}{2}},\,\,-8e^{-1})$, and point of inflection at $(4e^{-\frac{3}{2}},\,\,-24e^{-3})$.
+
+\section{Use logarithmic differentiation to find $\frac{dy}{dx}$.}
+102.\begin{align}
+    \set
+    y&=\sqrt[]{x^2(x+1)(x+2)},\,\, x>0\\
+    y^2&=x^2(x+1)(x+2)\\
+    2\ln y&=2\ln x+\ln(x+1)+\ln(x+2)\\
+    \frac{2}{y}\cdot\frac{dy}{dx}&=\frac{2}{x}+\frac{1}{x+1}+\frac{1}{x+2}\\
+    \frac{dy}{dx}&=\frac{y}{2}\lt(\frac{2}{x}+\frac{1}{x+1}+\frac{1}{x+2}\rt)\\
+    \frac{dy}{dx}&=\frac{\sqrt[]{x^2(x+1)(x+2)}}{2}\lt(\frac{2(x+1)(x+2)+x(x+2)+x(x+1)}{x(x+1)(x+2)}\rt)\\
+    &=\frac{4x^2+9x+4}{2\sqrt[]{(x+1)(x+2)}}
+\end{align}
+
+\section{Determine whether the
+statement is true or false. If it is false, explain why or give an
+example that shows it is false.}
+111. $\ln(x+25)=\ln x+\ln 25$\\
+\indent False because $\ln x+\ln 25=\ln(25x)\neq\ln(x+25)$.
+
+\vs\next
+112. $\ln xy=\ln x\ln y$\\
+\indent False because the property actually is $\ln xy=\ln x+\ln y$.
+
+\vs\next
+113. If $y=\ln\pi$, then $y'=\frac{1}{\pi}$.\\
+\indent False. Since $\pi$ is a constant, $\frac{d}{dx}(\ln\pi)=0$
+
+\vs\next
+114. If $y=\ln e$, then $y'=1$.\\
+\indent False because if $y=\ln e=1$, then $y'=0$.
+
+\section{Word problems}
+116. The relationship between the number of
+decibels $\beta$ and the intensity of a sound $I$ in watts per
+centimeter squared is $\beta=10\log_{10}\lt(\frac{1}{10^{-16}}\rt)$.\\
+Use the properties of logarithms to write the formula in
+simpler form, and determine the number of decibels of a
+sound with an intensity of $10^{-10}$ watt per square centimeter.\\
+\begin{align}
+    \set
+    \beta&=10\log_{10}\lt(\frac{I}{10^{-16}}\rt)\\
+    &=\frac{10}{\ln 10}(\ln I+16\ln 10)\\
+    &=160+10\log_{10}I\\
+    B(10^{-10})&=\frac{10}{\ln 10}(\ln 10^{-10}+16\ln 10)\\
+    &=\frac{10}{\ln 10}(-10\ln 10+16\ln 10)\\
+    &=\frac{10}{\ln 10}(6\ln 10)\\
+    &=60\,\,\text{decibels}
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

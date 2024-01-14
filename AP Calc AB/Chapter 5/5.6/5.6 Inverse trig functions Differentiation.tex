@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts, gensymb, graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+\newcommand*{\im}{\includegraphics}
+\newcommand*{\lt}{\left}
+\newcommand*{\rt}{\right}
+
+\begin{document}
+
+\title{Notes - 5.6 Inverse Trigonometric Functions: Differentiation}
+\author{Juan J. Moreno Santos}
+\date{January 2024}
+
+\maketitle
+\section{arcsin refresher}
+\begin{align}
+    \set
+    \sin\theta&=\frac{opp}{hyp}\\
+    \arcsin\lt(\frac{opp}{hyp}\rt)&=\sin^{-1}\lt(\frac{opp}{hyp}\rt)=\theta\\
+    \tan^{-1}\lt(\frac{opp}{adj}\rt)&=\theta\\
+\end{align}
+\section{Inverse trig functions}
+\begin{align}
+    \set
+    \cos(\arctan(2x^2))&=\frac{1}{\sqrt[]{1+4x^4}},\,\, opp=2x^2,\,\, adj=1,\,\, hyp=\sqrt[]{1^2+(2x^2)^2}\\
+    \cos\theta&=\frac{1}{\sqrt[]{1+4x^4}}\\
+    \frac{d}{dx}(\arcsin x)&=\frac{1}{\sqrt[]{1-x^2}}\\
+    \sin y&=\sin(\arcsin x)\\
+    \frac{d}{dx}&(\sin y=x)\\
+    \cos ydy&=dx\\
+    \frac{dy}{dx}&=\frac{1}{\cos y}
+\end{align}
+
+\begin{align}
+    \set
+    &\frac{d}{dx}(\cos^{-1}x)=\frac{}{},\,\, opp=\sqrt[]{1^2-x^2},\,\, adj=x,\,\, hyp=1\\
+    &\cos y=\cos(\cos^{-1}x)\\
+    \cos y&=x\\
+    -\sin ydy&=dx\\
+    \frac{dy}{dx}&=-\frac{1}{\sin y}
+\end{align}
+
+\begin{align}
+    \set
+    \frac{d}{dx}(\tan^{-1}x)&=\frac{1}{1+x^2},\,\, opp=x,\,\, adj=1,\,\, hyp=\sqrt[]{1^2+x^2}\\
+    y&=\tan(\tan^{-1}x)\\
+    \tan y&=x\\
+    \sec^2ydx&=dx\\
+    \frac{dy}{dx}&=\frac{1}{\sec^2 y}=\frac{1}{(\sec y)^2}=\frac{1}{(\sqrt[]{1+x^2})^2}
+\end{align}
+
+\begin{align}
+    \set
+    \frac{d}{dx}(\sec^{-1}x)&=,\,\, opp=\sqrt[]{x^2-1^2},\,\, adj=1,\,\, hyp=x\\
+    \sec y&=\frac{x}{1}=x\\
+    \sec y\tan ydy&=dx\\
+    \frac{dy}{dx}&=\frac{1}{\sec y\tan y}
+\end{align}
+
+
+
+
+\end{document}

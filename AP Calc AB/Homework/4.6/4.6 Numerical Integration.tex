@@ -1,0 +1,293 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts,  graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+\newcommand*{\im}{\includegraphics}
+\newcommand*{\lt}{\left}
+\newcommand*{\rt}{\right}
+
+\begin{document}
+
+\title{4.6 Numerical Integration}
+\author{Juan J. Moreno Santos}
+\date{December 2023}
+
+\maketitle
+\section{Use the Trapezoidal Rule and Simpson’s Rule
+to approximate the value of the definite integral for the given
+value of Round your answer to four decimal places and
+compare the results with the exact value of the definite integral.}
+Equations (1), (2), and (3) will be the exact value, the Trapezoidal Rule, and Simpson's Rule respectively.\\
+2.\begin{align}
+    \set
+    \int_{1}^{2}\lt(\frac{x^2}{4}+1\rt)dx&=\lt(\frac{x^3}{12}+x\rt)_1^2=\frac{19}{12}\approx 1.5833\\
+    \int_{1}^{2}\lt(\frac{x^2}{4}+1\rt)dx&\approx\frac{1}{8}\lt(\lt(\frac{1^2}{4}+1\rt)+2\lt(\frac{\lt(\frac{5}{4}\rt)^2}{4}+1\rt)+2\lt(\frac{\lt(\frac{3}{2}\rt)^2}{4}+1\rt)+2\lt(\frac{\lt(\frac{7}{4}\rt)^2}{4}+1\rt)+\lt(\frac{2^2}{4}+1\rt)\rt)=\frac{203}{128}\approx 1.5859\\
+    \int_{0}^{1}\lt(\frac{x^2}{4}+1\rt)dx&\approx\frac{1}{12}\lt(\lt(\frac{1^2}{4}+1\rt)+4\lt(\frac{\lt(\frac{5}{4}\rt)^2}{4}+1\rt)+2\lt(\frac{\lt(\frac{3}{2}\rt)^2}{4}+1\rt)+4\lt(\frac{\lt(\frac{7}{4}\rt)^2}{4}+1\rt)+\lt(\frac{2^2}{4}+1\rt)\rt)=\frac{19}{12}\approx 1.5833
+\end{align}
+
+\vs\next
+6.\begin{align}
+    \set
+    \int_{0}^{8}\sqrt[3]{x}dx&=\lt(\frac{3}{4}x^{4/3}\rt)_0^8=12\\
+    \int_{0}^{8}\sqrt[3]{x}dx&\approx\frac{1}{2}(0+2+2\sqrt[3]{2}+2\sqrt[3]{3}+2\sqrt[3]{4}+2\sqrt[3]{5}+2\sqrt[3]{6}+2\sqrt[3]{7}+2)\approx 11.7296\\
+    \int_{0}^{8}\sqrt[3]{x}dx&\approx\frac{1}{3}(0+4+2\sqrt[3]{2}+4\sqrt[3]{3}+2\sqrt[3]{4}+4\sqrt[3]{5}+2\sqrt[3]{6}+4\sqrt[3]{7}+2)\approx 11.8632
+\end{align}
+
+\vs\next
+10.\begin{align}
+    \set
+    \int_{0}^{2}x\sqrt[]{x^2+1}dx&=\frac{1}{3}((x^2+1)^{3/2})_0^2=\frac{1}{3}(5^{3/2}-1)\approx 3.393\\
+    \int_{0}^{2}x\sqrt[]{x^2+1}dx&\approx\frac{1}{4}\lt(0+2\lt(\frac{1}{2}\rt)\sqrt[]{\lt(\frac{1}{2}\rt)^2+1}+2\lt(1\rt)\sqrt[]{\lt(1\rt)^2+1}+2\lt(\frac{3}{2}\rt)\sqrt[]{\lt(\frac{3}{2}\rt)^2+1}+2\sqrt[]{\lt(2\rt)^2+1}\rt)\approx 3.457\\
+    \int_{0}^{2}x\sqrt[]{x^2+1}dx&\approx\frac{1}{6}\lt(0+4\lt(\frac{1}{2}\rt)\sqrt[]{\lt(\frac{1}{2}\rt)^2+1}+2\lt(1\rt)\sqrt[]{\lt(1\rt)^2+1}+4\lt(\frac{3}{2}\rt)\sqrt[]{\lt(\frac{3}{2}\rt)^2+1}+2\sqrt[]{\lt(2\rt)^2+1}\rt)\approx 3.392\
+\end{align}
+
+\section{Approximate the definite integral using the
+Trapezoidal Rule and Simpson’s Rule with $n=4$. Compare
+these results with the approximation of the integral using a
+graphing utility.}
+Equations (1), (2), and (3) will be the exact value, the Trapezoidal Rule, and Simpson's Rule respectively.\\
+12.\begin{align}
+    \set
+    \int_{0}^{2}\frac{1}{\sqrt[]{1+x^3}}dx&=1.402\\
+    \int_{0}^{2}\frac{1}{\sqrt[]{1+x^3}}dx&\approx\frac{1}{4}\lt(1+2\lt(\frac{1}{\sqrt[]{1+\lt(\frac{1}{2}\rt)^3}}\rt)+2\lt(\frac{1}{\sqrt[]{1+\lt(1\rt)^3}}\rt)+2\lt(\frac{1}{\sqrt[]{1+\lt(\frac{3}{2}\rt)^3}}\rt)+\frac{1}{3}\rt)\approx 1.397\\
+    \int_{0}^{2}\frac{1}{\sqrt[]{1+x^3}}dx&\approx\frac{1}{6}\lt(1+4\lt(\frac{1}{\sqrt[]{1+\lt(\frac{1}{2}\rt)^3}}\rt)+2\lt(\frac{1}{\sqrt[]{1+\lt(1\rt)^3}}\rt)+4\lt(\frac{1}{\sqrt[]{1+\lt(\frac{3}{2}\rt)^3}}\rt)+\frac{1}{3}\rt)\approx 1.405
+\end{align}
+
+16.\begin{align}
+    \set
+    \int_{0}^{\sqrt[]{\frac{\pi}{2}}}\tan x^2dx&=0.256\\
+    \int_{0}^{\sqrt[]{\frac{\pi}{2}}}\tan x^2dx&\approx\frac{\sqrt[]{\frac{\pi}{4}}}{8}\lt(\tan 0+2\tan\lt(\frac{\sqrt[]{\frac{\pi}{4}}}{4}\rt)^2+2\tan\lt(\frac{\sqrt[]{\frac{\pi}{4}}}{2}\rt)^2+2\tan\lt(\frac{\sqrt[]{\frac{3\pi}{4}}}{4}\rt)^2+\tan\lt(\sqrt[]{\frac{\pi}{4}}\rt)^2\rt)\approx 0.271\\
+    \int_{0}^{\sqrt[]{\frac{\pi}{2}}}\tan x^2dx&\approx\frac{\sqrt[]{\frac{\pi}{4}}}{12}\lt(\tan 0+4\tan\lt(\frac{\sqrt[]{\frac{\pi}{4}}}{4}\rt)^2+2\tan\lt(\frac{\sqrt[]{\frac{\pi}{4}}}{2}\rt)^2+4\tan\lt(\frac{\sqrt[]{\frac{3\pi}{4}}}{4}\rt)^2+\tan\lt(\sqrt[]{\frac{\pi}{4}}\rt)^2\rt)\approx 0.257
+\end{align}
+
+\vs\next
+20.\begin{align}
+    \set
+    \int_{0}^{\pi}f(x)dx&=1.852,\,\, f(x)=\begin{cases}
+        \frac{\sin x}{x},\,\, x>0\\
+        1,\,\, x=0
+        \end{cases}\\
+    \int_{0}^{\pi}\frac{\sin x}{x}dx&\approx\frac{\pi}{8}\lt(1+\frac{2\sin\lt(\frac{\pi}{4}\rt)}{\frac{\pi}{4}}+\frac{2\sin\lt(\frac{\pi}{2}\rt)}{\frac{\pi}{2}}+\frac{2\sin\lt(\frac{3\pi}{4}\rt)}{\frac{3\pi}{4}}+0\rt)\approx 1.836\\
+    \int_{0}^{\pi}\frac{\sin x}{x}dx&\approx\frac{\pi}{12}\lt(1+\frac{4\sin\lt(\frac{\pi}{4}\rt)}{\frac{\pi}{4}}+\frac{2\sin\lt(\frac{\pi}{2}\rt)}{\frac{\pi}{2}}+\frac{4\sin\lt(\frac{3\pi}{4}\rt)}{\frac{3\pi}{4}}+0\rt)\approx 1.852
+\end{align}
+
+\section{Use the error formulas in Theorem 4.20 (Errors in the Trapezoidal Rule and Simpson's Rule) to
+estimate the errors in approximating the integral, with $n=4$
+using (a) the Trapezoidal Rule and (b) Simpson’s Rule.}
+24.\begin{align}
+    \set
+    &\int_{3}^{5}(5x+2)dx\\
+    f(x)&=5x+2\\
+    f'(x)&=5\\
+    f''(x)&0
+\end{align}
+For both rules, the error is zero.
+
+\section{Use the error formulas in Theorem 4.20 to
+find $n$ such that the error in the approximation of the definite
+integral is less than or equal to 0.00001 using (a) the Trapezoidal
+Rule and (b) Simpson’s Rule.}
+30.\begin{align}
+    \set
+    &\int_{0}^{1}\frac{1}{1+x}dx\\
+    f(x)&=(1+x)^{-1},\,\, 0\leq x\leq 1\\
+    f'(x)&=-(1+x)^{-2}\\
+    f''(x)&=2(1+x)^{-3}\\
+    f'''(x)&=-6(1+x)^{-4}\\
+    f^{(4)}(x)&=24(1+x)^{-5}
+\end{align}
+\begin{enumerate}[(a)]
+    \item Trapezoidal: Maximum of $|f''(x)|=|2(1+x)^{-3}|$ is 2.    
+        \begin{align}
+            \text{Error}\leq\frac{1}{12n^2}(2)&\leq 0.00001\\
+            n^2&\geq16666.67\\
+            n&\geq 129.10
+        \end{align}
+    \item Simpson's: Maximum of $|f^{(4)}(x)|=|24(1+x)^{-5}|$ is 24.
+        \begin{align}
+            \text{Error}\leq\frac{1}{180n^4}(24)&\leq 0.00001\\
+            n^4&\geq133333.33\\
+            n&\geq 10.75  
+        \end{align}
+\end{enumerate}
+
+\vs\next
+40. Approximate the area of the shaded region using (a) the
+Trapezoidal Rule and (b) Simpson’s Rule with $n=8$\\
+\im{40.png}\\
+\begin{align}
+    \set
+    n=8,\,\, b-a&=8-0=8\\
+    \int_{0}^{8}f(x)dx&\approx\frac{8}{16}(0+2(1.5)+2(3)+2(5.5)+2(9)+2(10)+2(9)+2(6)+0)=\frac{1}{2}(88)=44\\
+    \int_{0}^{8}f(x)dx&\approx\frac{8}{24}(0+4(1.5)+2(3)+4(5.5)+2(9)+4(10)+2(9)+4(6)+0)=\frac{134}{3}
+\end{align}
+
+\section{Capstone}
+46. Consider a function $f(x)$ that is concave upward on the interval [0, 2] and a function $g(x)$ that is concave downward on [0, 2].
+\begin{enumerate}[(a)]
+    \item Using the Trapezoidal Rule, which integral would be
+    overestimated? Which integral would be underestimated?
+    Assume $n=4$ Use graphs to explain your answer.\\
+        \indent $\int_{0}^{2}f(x)dx$ would be overestimated, and $\int_{0}^{2}g(x)dx$ would be underestimated.
+    \item Which rule would you use for more accurate approxi-
+    mations of $\int_{0}^{2}f(x)dx$ and $\int_{0}^{2}g(x)dx$ the Trapezoidal
+    Rule or Simpson’s Rule? Explain your reasoning.\\
+        \indent Simpson's Rule would be more accurate because it considers the graph's curvature.
+\end{enumerate}
+
+\section{Work}
+48. To determine the size of the motor required to operate
+a press, a company must know the amount of work done when
+the press moves an object linearly 5 feet. The variable force to
+move the object is $F(x)=100x\sqrt[]{25-x^3}$ where $F$ is given in
+pounds and $x$ gives the position of the unit in feet. Use
+Simpson’s Rule with $n=12$ to approximate the work $W$ (in
+foot-pounds) done through one cycle if $W=\int_{0}^{5}F(x)dx$.
+\begin{align}
+    \set
+    W&=\int_{0}^{5}100x\sqrt[]{125-x^3}dx,\,\, n=12\\
+    \int_{0}^{5}100x\sqrt[]{125-x^3}dx&\approx\frac{5}{3(12)}\Bigg(0+400\Bigg(\frac{5}{12}\Bigg)\sqrt[]{125-\Bigg(\frac{5}{12}\Bigg)^3}+200\Bigg(\frac{10}{12}\Bigg)\sqrt[]{125-\Bigg(\frac{10}{12}\Bigg)^3}\Bigg)\nonumber \\
+        &+400\Bigg(\frac{15}{12}\sqrt[]{125-\Bigg(\frac{15}{12}\Bigg)^3}+\cdots+0\Bigg)\approx 10233.58\text{ft-lb}
+\end{align}
+
+\section{Use Simpson’s
+Rule with $n=6$ to approximate $\pi$  using the given equation.}
+50.\begin{align}
+    \set
+    &\int_{0}^{\frac{1}{2}}\frac{6}{\sqrt[]{1-x^2}}dx,\,\, n=6\\
+    \pi&\approx\frac{\lt(\frac{1}{2}-0\rt)}{3(6)}(6+4(6.0209)+2(6.0851)+4(6.1968)+2(6.3640)+4(6.6002)+6.9282)\approx\frac{1}{36}(113.098)\approx 3.1416
+\end{align}
+
+\section{Use the Trapezoidal Rule to
+estimate the number of square meters of land in a lot where $x$
+and $y$ are measured in meters, as shown in the figures. The land
+is bounded by a stream and two straight roads that meet at right
+angles.}
+52.\\\im[scale=0.5]{52a.png}\im[scale=0.5]{52b.png}
+\begin{align}
+    \set
+    \text{Area}\approx\frac{1000}{2(10)}(125+2(125)+2(120)+2(112)+2(90)+2(90)+2(95)+2(88)+2(75)+2(35))=89.250\text{m}^2
+\end{align}
+
+\section{Warm-up 12/11/2023}
+The sides of the rectangle increase in such a way that $\frac{dz}{dt}=1$ and $\frac{dx}{dt}=3\frac{dy}{dt}$. At the instant that $x=4$ and $y=3$ what is the value of $\frac{dx}{dt}$?
+\begin{align}
+    \set
+    x^2+y^2&=z^2\\
+    4(3\frac{dy}{dt})+3(\frac{dy}{dt})&=5(1)\\
+    \frac{dx}{dt}&=3\frac{dy}{dt}\therefore 15\frac{dy}{dt}=\frac{5}{5\cdot 3}=\frac{1}{3}\frac{dy}{dt}
+\end{align}
+
+\vs\next
+A polynomial $\p(x)$ has local maxima (-2, 4) and (5, 7) and a local minimum at (1, 1) and no other critical points. How many roots does $p(x)$ have?\\
+\indent 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

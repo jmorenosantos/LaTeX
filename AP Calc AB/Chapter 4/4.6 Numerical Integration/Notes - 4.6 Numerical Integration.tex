@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts,  graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+\newcommand*{\im}{\includegraphics}
+
+\begin{document}
+
+\title{4.6 Numerical Integration}
+\author{Juan J. Moreno Santos}
+\date{December 2023}
+
+\maketitle
+
+\section{Why trapezoids are better than rectangles when approximating area}
+\im{1.png}
+\im{2.png}
+
+Let $b_n$ be the height of the trapezoid at each $x_n$ point. The area of the $i$-th trapezoid is
+\[\left(\frac{f(x_{i-1}+f(x_i))}{2}\right)\left(\frac{b-a}{n}\right)\]
+
+The area of a trapezoid is
+\[\left(\frac{b_1+b_2}{2}\right)h\]
+
+This implies that the sum of the areas of the $n$ trapezoids is
+\begin{align}
+    \set
+    \text{Area}&=\left(\frac{b_1+b_2}{2}\right)h+\left(\frac{b_2+b_3}{2}\right)h+\left(\frac{b_3+b_4}{2}\right)h+\left(\frac{b_4+b_5}{2}\right)h\\
+    &=\frac{h}{2}(b_1+b_2+b_2+b_3+b_3+b_4+b_5)\\
+    &=\frac{b-a}{2n}(b_1+2b_2+2b_3+2b_4+b5);\,\, \Delta x=\frac{b-a}{n}=\frac{h}{2}\Rightarrow h=\frac{b-a}{2n};\\
+    &=\frac{b-a}{2n}(f(x_0)=2f(x_1)+2f(x_2)+2f(x_3)+\cdots+2f(x_{n-1})+f(x_n))
+\end{align}
+
+\section{The trapezoidal rule}
+Let $f$ be continuous on [a, b]. The Trapezoidal Rule for approximating $\int_{a}^{b}f(x)dx$ is given by
+\[\int_{a}^{b}f(x)dx\approx\frac{b-a}{2n}(f(x_0)+2f(x_1)+2f(x_2)+\cdots+2f(x_{n-1}+f(x_n)))\]
+Moreover, as $n\to\infty$, the right-hand side approaches the integral $\int_{a}^{b}f(x)dx$.
+
+\subsection{Example 1 - Approximation with the Trapezoidal Rule}
+Approximate $\int_{0}^{\pi}\sin xdx$ for $n=4$ and $n=8$\\
+\im{ex1a.png}\\
+\begin{align}
+    &\int_{0}^{\pi}\sin xdx,\,\, n=4,\,\, \Delta x=\frac{\pi}{4}\\
+    &\approx\frac{\pi=0}{2(4)}\left(\sin 0+2\sin\frac{\pi}{4}+2\sin\frac{\pi}{2}+2\sin\frac{3\pi}{4}+\sin\pi\right)\\
+    &=\frac{\pi}{8}(0+\sqrt[]{2})+2+\sqrt[]{2}+0\\
+    &=\frac{\pi}{8}(2+2\sqrt[]{2})u^2
+\end{align}
+
+\im{ex1b.png}\\
+\begin{align}
+    \set
+    &\int_{0}^{\pi}\sin xdx,\,\, n=8,\,\, \Delta x=\frac{\pi}{8}\\
+    &\approx\frac{\pi}{16}(\sin 0+2\sin\frac{\pi}{8}+2\sin\frac{\pi}{4}+2\sin\frac{3\pi}{8}+2\sin\frac{\pi}{2}+2\sin\frac{5\pi}{8}+2\sin\frac{3\pi}{4}+2\sin\frac{7\pi}{8}+\sin\pi)\\
+    &=\frac{\pi}{16}\left(0+\sum_{i=1}^{7}2\sin\left(\frac{i\pi}{8}\right)+0\right)\\
+    &\approx 1.974
+\end{align}
+
+\section{Simpson's Rule and why curves are even better than trapezoids when approximating area.}
+Let $f$ be continuous on [a, b] and let $n$ be an even integer. Simpson's Rule for approximating $\int_{a}^{b}f(x)dx$ is
+\[\int_{a}^{b}f(x)dx\approx\frac{b-a}{3n}(f(x_0)+4f(x_1)+2f(x_2)+4f(x_3)+\cdots+4f(x_{n-1})+f(x_n))\]
+Moreover, as $n\to\infty$, the right-hand side approaches the integral $\int_{a}^{b}f(x)dx$.
+
+\end{document}

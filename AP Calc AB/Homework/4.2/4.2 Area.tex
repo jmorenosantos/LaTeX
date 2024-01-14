@@ -1,0 +1,208 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts,  graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+\newcommand*{\im}{\includegraphics}
+
+\begin{document}
+
+\title{4.2 Area}
+\author{Juan J. Moreno Santos}
+\date{December 2023}
+
+\maketitle
+
+\section{Find the sum. Use the summation capabilities of a graphing utility to verify your result.}
+2.\begin{align}
+    &\sum_{k=5}^{8}k(k-4)\\
+    &=5(1)+6(2)+7(3)+8(4)=70
+\end{align}
+
+\vs\next
+6.\begin{align}
+    \set
+    &\sum_{i=1}^{4}((i-1)^2+(i+1)^3)\\
+    &=(0+8)+(1+27)+(4+64)+(9+125)\\
+    &=238\\
+\end{align}
+
+\section{Use sigma notation to write the sum.}
+8.\begin{align}
+    \set
+    &\frac{9}{1+1}+\frac{9}{1+2}+\frac{9}{1+3}\cdots+\frac{9}{1+14}\\
+    &=\sum_{i=1}^{14}\frac{9}{1+i}
+\end{align}
+
+12.\begin{align}
+    \set
+    &\left(1-\left(\frac{2}{n}-1\right)^2\right)\left(\frac{2}{n}\right)+\cdots+\left(1-\left(\frac{2n}{n}-1\right)^2\right)\left(\frac{2}{n}\right)\\
+    &=\frac{2}{n}\sum_{i=1}^{n}\left(1-\left(\frac{2i}{n}-1\right)^2\right)
+\end{align}
+
+\section{Use the properties of summation and
+Theorem 4.2 (summation formulas) to evaluate the sum. Use the summation capabili-
+ties of a graphing utility to verify your result.}
+
+16.\begin{align}
+    \set
+    &\sum_{i=1}^{30}-18\\
+    &=(-18)(30)\\
+    &=-540
+\end{align}
+
+\vs\next
+20.\begin{align}
+    \set
+    &\sum_{i=1}^{10}(i^2-1)\\
+    &=\sum_{i=1}^{10}i^2-\sum_{i=1}^{10}1\\
+    &=\left(\frac{10(11)(21)}{6}\right)-10\\
+    &=375
+\end{align}
+
+\vs\next
+26. Consider the function $g(x)=x^2+x-4$.
+\begin{enumerate}[(a)]
+    \item Estimate the are between the graph of $g$ and the $x$-axis between $x=2$ and $x=4$ using four rectangles and right endpoints. Sketch the graph and the rectangles.\\
+    \im{26.png}\\
+    The $\Delta x$ width of each rectangle is $\frac{1}{2}$. The right endpoints yield the heights.
+        \begin{align}
+            \set
+            \text{Area}&\approx\frac{1}{2}\left(\left(\left(\frac{5}{2}\right)^2+\left(\frac{5}{2}\right)-4\right)+(3^2+3-4)+\left(\left(\frac{7}{2}\right)^2+\frac{7}{2}-4\right)+(4^2+4-4)\right)\\
+            &=\frac{81}{4}\\
+            &=20.25
+        \end{align}
+\end{enumerate}
+
+\section{Use left and right endpoints and the given
+number of rectangles to find two approximations of the area of
+the region between the graph of the function and the -axis over
+the given interval.}
+28.$f(x)=9-x,\,\,[2, 4],\,\,\text{6 rectangles}$
+\begin{align}
+    \set
+    \Delta x&=\frac{4-2}{6}=\frac{1}{3}\\
+    \text{Left endpoints: Area}&\approx\frac{1}{3}\left(7+\frac{20}{3}+\frac{19}{3}+6+\frac{17}{3}+\frac{16}{3}\right)=\frac{37}{3}\\
+    \text{Left endpoints: Area}&\approx\frac{1}{3}\left(\frac{20}{3}+\frac{19}{3}+6+\frac{17}{3}+\frac{16}{3}+\frac{15}{3}\right)=\frac{35}{3}\\
+    &\frac{35}{3}<\text{Area}<\frac{37}{3}
+\end{align}
+
+\vs\next
+30.$g(x)=x^2+1,\,\,[1, 3],\,\,\text{8 rectangles}$
+\begin{align}
+    \set
+    \Delta x&=\frac{3-1}{8}=\frac{1}{4}\\
+    \text{Left endpoints: Area}&\approx\frac{1}{4}\left(2+\frac{41}{16}+\frac{13}{4}+\frac{65}{16}+5+\frac{97}{16}+\frac{29}{4}+\frac{137}{16}\right)=\frac{155}{16}=9.6875\\
+    \text{Left endpoints: Area}&\approx\frac{1}{4}\left(\frac{41}{16}+\frac{13}{4}+\frac{65}{16}+5+\frac{97}{16}+\frac{29}{4}+\frac{137}{16}+10\right)=11.6875\\
+    &9.6875<\text{Area}<11.6875
+\end{align}
+
+\vs\next
+32.$g(x)=\sin x,\,\,[0, \pi],\,\,\text{4 rectangles}$
+\begin{align}
+    \set
+    \Delta x&=\frac{\pi-0}{6}=\frac{\pi}{6}\\
+    \text{Left endpoints: Area}&\approx\frac{\pi}{6}\left(\sin 0+\sin\frac{\pi}{6}+\sin\frac{\pi}{3}+\sin\frac{\pi}{2}+\sin\frac{2\pi}{3}+\sin\frac{5\pi}{6}\right)\approx 1.9541\\
+    \text{Left endpoints: Area}&\approx\frac{\pi}{6}\left(\sin\frac{\pi}{6}+\sin\frac{\pi}{3}+\sin\frac{\pi}{2}+\sin\frac{2\pi}{3}+\sin\frac{5\pi}{6}+\sin\pi\right)\approx 1.9541\\
+    &\text{The answers are the same by symmetry. The exact area of 2 is larger.}
+\end{align}
+
+\section{Bound the area of the shaded region by
+approximating the upper and lower sums. Use rectangles of
+width 1.}
+36.\\\im{36.png}\\
+\begin{align}
+    \set
+    S&=\left(5+2+1+\frac{2}{3}+\frac{1}{2}\right)(1)=\frac{55}{6}\\
+    s&=\left(2+1+\frac{2}{3}+\frac{1}{2}+\frac{1}{3}\right)(1)=\frac{9}{2}
+\end{align}
+
+\section{Use upper and lower sums to approximate
+the area of the region using the given number of subintervals (of
+equal width).}
+44.\\\im{44.png}\\
+\begin{align}
+    \set
+    S(5)&=1\left(\frac{1}{5}\right)+\sqrt[]{1-\left(\frac{1}{5}\right)^2}\left(\frac{1}{5}\right)+\sqrt[]{1-\left(\frac{2}{5}\right)^2}\left(\frac{1}{5}\right)+\sqrt[]{1-\left(\frac{3}{5}\right)^2}\left(\frac{1}{5}\right)+\sqrt[]{1-\left(\frac{4}{5}\right)^2}\left(\frac{1}{5}\right)\\
+    &=\frac{1}{5}\left(1+\frac{\sqrt[]{24}}{5}+\frac{\sqrt[]{21}}{5}+\frac{\sqrt[]{16}}{5}+\frac{\sqrt[]{9}}{5}\right)\approx 0.859\\
+    s(5)&=\sqrt[]{1-\left(\frac{1}{5}\right)^2}\left(\frac{1}{5}\right)+\sqrt[]{1-\left(\frac{2}{5}\right)^2}\left(\frac{1}{5}\right)+\sqrt[]{1-\left(\frac{3}{5}\right)^2}\left(\frac{1}{5}\right)+\sqrt[]{1-\left(\frac{4}{5}\right)^2}\left(\frac{1}{5}\right)+0\approx 0.659
+\end{align}
+
+\section{Use the Midpoint Rule $\text{Area}\approx\sum_{i=1}^{n}f\left(\frac{x_i+x_{i-1}}{2}\right)\Delta x$ with $n=4$ to approximate the area of the region bounded
+by the graph of the function and the $x$-axis over the given
+interval.}
+74.\begin{align}
+    \set
+    f(x)&=x^2+4x,\,\,[0, 4],\,\, n=4\\
+    \text{Let}\,\, c_i&=\frac{x_i+x_{i-1}}{2}\\
+    \Delta x&=1,\,\, c_1=\frac{1}{2},\,\, c_2=\frac{3}{2},\,\, c_3=\frac{5}{2},\,\, c_4=\frac{7}{2}\\
+    \text{Area}&\approx \sum_{i=1}^{n}f(c_i)\Delta x=\sum_{i-1}^{4}(c_i^2+4c_i)(1)\\
+    &=\left(\left(\frac{1}{4}+2\right)+\left(\frac{9}{4}+6\right)+\left(\frac{25}{4}+10\right)+\left(\frac{49}{4}+14\right)\right)\\
+    &=53
+\end{align}
+
+\vs\next
+76.\begin{align}
+    \set
+    f(x)&=\sin x,\,\, 0\leq x\leq\frac{\pi}{2},\,\, n=4\\
+    \text{Let}\,\, c_i&=\frac{x_i+x_{i-1}}{2}\\
+    \Delta x&=\frac{\pi}{8},\,\, c_1=\frac{\pi}{16},\,\, c_2=\frac{3\pi}{16},\,\, c_3=\frac{5\pi}{16},\,\, c_4=\frac{7\pi}{16}\\
+    \text{Area}&\approx\sum_{i=1}^{n}f(c_i)\Delta x\\
+    &=\sum_{i=1}^{4}(\sin c_i)\left(\frac{\pi}{8}\right)=\frac{\pi}{8}\left(\sin\frac{\pi}{16}+\sin\frac{3\pi}{16}+\sin\frac{5\pi}{16}+\sin\frac{7\pi}{16}\right)\approx 1.006
+\end{align}
+
+\section{Capstone}
+86. Consider a function $f(x)$ that is increasing on the interval $[1, 4]$
+The interval $[1, 4]$ is divided into 12 subintervals.\\
+\begin{enumerate}[(a)]
+    \item What are the left endpoints of the first and last
+    subintervals?
+        \begin{align}
+            \set
+            \Delta x=\frac{4-1}{12}=\frac{1}{4}
+        \end{align}
+        \indent The left endpoint of the first subinterval is 1, and the left endpoint of the last subinterval is $4-\frac{1}{4}=\frac{15}{4}$.
+
+    \item What are the right endpoints of the first two subintervals?\\
+        \indent The right end points of the first two subintervals are $1+\frac{1}{4}=\frac{5}{4}$ and $1+2\left(\frac{1}{4}\right)=\frac{3}{2}$.
+    \item When using the right endpoints, will the rectangles lie above or below the graph of $f(x)$> Use a graph to explain your answer.\\
+        \indent When using right endpoints, the rectangles will be above the curve.
+    \item What can you conclude about the heights of the rectangles if a function is constant on the given interval?\\
+        \indent The height of the rectangles are the same for a constant function.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,197 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts,  graphicx, enumerate, float, wrapfig}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+
+
+\title{AP Environmental Science - Population Math Practice}
+\author{Juan J. Moreno Santos}
+\date{November 2023}
+
+\begin{document}
+\maketitle
+
+\section{As conventional sources of crude oil are depleted, unconventional sources such as oil sands (also known as tar sands) are being utilized. Oil sands contain bitumen, which can be processed into a synthetic crude oil. A region of boreal forest in Alberta, Canada, that covers a deposit of oil sands will be cut and removed during the process of bitumen extraction. It is estimated that the deposit contains 73 billion barrels of recoverable bitumen. The rate of extraction from the deposit will be approximately 1 million barrels of bitumen per day.}
+1. Assuming the above extraction rate, calculate how many days will be needed to extract the recoverable volume of bitumen from the oil sands.\\
+\begin{align}
+    73000000000\,\,\text{barrels} \cdot \frac{1\,\,\text{day}}{1000000\,\,\text{million barrels}}=73000\,\,\text{days}
+\end{align}
+
+\vs
+\next
+2. Calculate how many years will be needed to fully extract the recoverable volume of bitumen from the oil sands.
+\begin{align}
+    \set
+    730000\,\,\text{days}\cdot \frac{1\,\,\text{year}}{365\,\,\text{days}}=200\,\,\text{years}
+\end{align}
+
+\vs
+\next
+3. Monthly production of synthetic crude oil is 30 million barrels. Producing one barrel of synthetic crude oil uses two barrel of heated freshwater. Calculate the number of barrels of freshwater needed each year to supply this demand.
+\begin{align}
+    \set
+    \frac{30000000\,\,\text{crude oil barrels}}{1\,\,\text{month}}\cdot \frac{12\,\,\text{months}}{1\,\,\text{year}}\cdot \frac{2\,\,\text{heated freshwater barrels}}{1\,\,\text{crude oil barrel}}=\frac{720000000\,\,\text{barrels of heated freshwater}}{1\,\,\text{year}}
+\end{align}
+
+
+\section{A 1500 square meter is about to be sold for \$30000 per hectare (ha)}
+4. How much money will be made in the sale?\\
+\begin{align}
+    \set
+    1500\text{m}^2\cdot \frac{1\,\,\text{acre}}{4046.86\text{m}^2}\cdot\frac{1\,\,\text{hectare}}{2.47\,\,\text{acres}}\cdot\frac{\$30000}{1\,\,\text{hectare}}=\$4501.9
+\end{align}
+
+\section{Apesville is a utopian island of 5000 square kilometers.  There are currently 250,000 inhabitants of the island.  Last year, there were 12,000 new children born and 10,000 people were recorded as deceased.}
+5. What is the current population density?
+\begin{align}
+    \set
+    \text{Density}=\frac{\text{Population}}{\text{Area}}=\frac{250000\,\,\text{people}}{5000\text{km}^2}=50\text{people}/\text{km}^2
+\end{align}
+
+\vs
+\next
+6. What are the crude birth and death rates?
+\begin{align}
+    \set
+    \text{CBR}&=\frac{12000\,\,\text{births}}{250000 \text{people}}\cdot 1000\,\,\text{people}=48\,\,\text{births}/1000\text{people}\\
+    \text{CDR}&=\frac{10000\,\,\text{deaths}}{250000 \text{people}}\cdot 1000\,\,\text{people}=40\,\,\text{deaths}/1000\text{people}
+\end{align}
+
+\vs
+\next
+7. What is the global growth rate?
+\begin{align}
+    \set
+    r=\frac{CBR-CDR}{10}=\frac{48-40}{10}=0.8\%
+\end{align}
+
+\vs
+\next
+8. In how many years will the population of Apesville double?
+\begin{align}
+    \set
+    \text{Doubling time (years)}=\frac{70}{\text{Growth rate(\%)}}=\frac{70}{0.8}=87.5\,\,\text{years}
+\end{align}
+
+\section{The country of Transylvania contains 2.3 million people (vampires not included) and covers 800,000 square kilometers.  In the year after the last census, there were 109,000 new children born and 111,000 people died.}
+9. What is the current population density?
+\begin{align}
+    \set
+    \text{Density}=\frac{\text{Population}}{\text{Area}}=\frac{2300000\,\,\text{people}}{800000\text{km}^2}=2.875\,\,\text{people}/\text{km}^2
+\end{align}
+
+\vs
+\next
+10 What are the crude birth and death rates?
+\begin{align}
+    \set
+    \text{CBR}&=\frac{109000\,\,\text{births}}{2300000 \text{people}}\cdot 1000\,\,\text{people}=47.4\,\,\text{births}/1000\text{people}\\
+    \text{CDR}&=\frac{111000\,\,\text{deaths}}{2300000 \text{people}}\cdot 1000\,\,\text{people}=48.3\,\,\text{deaths}/1000\text{people}
+\end{align}
+
+\vs
+\next
+11. What is the global growth rate (r)?
+\begin{align}
+    \set
+    r=\frac{CBR-CDR}{10}=\frac{47.4-48.3}{10}=0.09\%
+\end{align}
+
+\vs
+\next
+12. In how many years will the population of Transylvania double (or halve, if decreasing)?
+\begin{align}
+    \set
+    \text{Doubling time (years)}=\frac{70}{\text{Growth rate(\%)}}=\frac{70}{-0.09}\approx -778\,\,\text{years}
+\end{align}
+
+\section{Countries}
+
+\begin{flushleft}
+    \begin{table}[h]
+        \begin{tabular}{|l|l|l|l|l|} % Alignment: l- left, r- right, c- center. Pipes | separate columns
+        \hline
+        Country & Birth rate (2011) & Death rate (2011) & Growth rate & Doubling time\\ \hline
+        United States & 13 & 8& 0.5\% & 140 years\\ \hline
+        Mexico & 19 & 5 & 1.4\% & 50 years\\
+        \hline
+        \end{tabular}
+    \end{table}
+\end{flushleft}
+13. Calculate the growth rates and doubling times for the countries listed.
+\begin{align}
+    \set
+    r_{USA}&=\frac{13-8}{10}=0.5\%\\
+    r_{MEX}&=\frac{19-5}{10}=1.4\%
+\end{align}
+Let $DT$ be the doubling time:
+\begin{align}
+    DT_{USA}=\frac{70}{0.5}=140\,\,\text{years}\\
+    DT_{MEX}=\frac{70}{1.4}=50\,\,\text{years}
+\end{align}
+
+\section{A country has 84,000 births and 55,000 deaths per year, along with 24,000 people who immigrate in and 5,000 people who emigrate out. The total population is 23,000,000.}
+14. Calculate the growth rate for this country.
+\begin{align}
+    \set
+    r=\frac{(24000+84000)-(5000+55000)}{23000000}\cdot 100=0.2\%
+\end{align}
+
+\section{Italy’s population is about 60 million and its growth rate is -0.1\%}
+15. How many people will Italy lose this year?
+\begin{align}
+    \set
+    60000000\cdot\frac{0.1}{100}=60000\,\,\text{people}
+\end{align}
+
+\section{We are currently adding 84 million people to the world’s population each year.  That is about 229,000 each day. Below is a listing of some of the world’s worst disasters, along with an approximate death toll.}
+\begin{flushleft}
+    \begin{table}[h]
+        \begin{tabular}{|l|l|l|} % Alignment: l- left, r- right, c- center. Pipes | separate columns
+        \hline
+        Disasters & Approximate number of deaths & Replaced this number in what time span?\\ \hline
+        Hurricane Katrina & 1836 & 11.35 minutes\\ \hline
+        Black Plague & 75000000 & 10.7 months\\
+        \hline
+        \end{tabular}
+    \end{table}
+\end{flushleft}
+16. At today’s growth rate, determine how many minutes, hours, days, weeks, or months it would take to replace those lost.
+\begin{align}
+    \set
+    \text{Katrina}\rightarrow&1836\,\,\text{people}\cdot\frac{1\,\,\text{day}}{229000}=0.008017\,\,\text{days}\cdot\frac{24\,\,\text{hr}}{1\,\,\text{day}}\cdot\frac{60\,\,\text{min}}{1\,\,\text{hr}}=11.5\,\,\text{min}\\
+    \text{Black Plague}\rightarrow&75000000\,\,\text{people}\cdot\frac{1\,\,\text{year}}{84000000\,\,\text{people}}=0.89\,\,\text{year}\cdot\frac{12\,\,\text{months}}{1\,\,\text{year}}=10.7\,\,\text{months}
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

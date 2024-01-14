@@ -1,0 +1,471 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts,  graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+\newcommand*{\im}{\includegraphics}
+\newcommand*{\lt}{\left}
+\newcommand*{\rt}{\right}
+
+\begin{document}
+
+\title{4.4 The Fundamental Theorem of Calculus}
+\author{Juan J. Moreno Santos}
+\date{December 2023}
+
+\maketitle
+
+\section{Use a graphing utility
+to graph the integrand. Use the graph to determine whether the
+definite integral is positive, negative, or zero.}
+2.\begin{align}
+    \set
+    f(x)&=\cos x\\
+    \int_{0}^{\pi}\cos xdx&=0
+\end{align}
+
+\vs\next
+4.\begin{align}
+    \set
+    f(x)&=x\sqrt[]{2-x}\\
+    \int_{-2}^{2}x\sqrt[]{2-x}dx&=negative
+\end{align}
+
+\section{Evaluate the definite integral of the algebraic
+function. Use a graphing utility to verify your result.}
+6.\begin{align}
+    \set
+    &\int_{4}^{9}5dv\\
+    &=(5v)_4^9\\
+    &=5(9)-5(4)=25
+\end{align}
+
+\vs\next
+10.\begin{align}
+    \set
+    &\int_{1}^{7}(6x^2+2x-3)dx\\
+    &=(2x^3+x^2-3x)_1^7\\
+    &=(2(7)^3+(7)^2-3(7))-(2+1-3)=714
+\end{align}
+
+\vs\next
+14.\begin{align}
+    \set
+    &\int_{-2}^{-1}\left(u-\frac{1}{u^2}\right)du\\
+    &=\left(\frac{u^2}{2}+\frac{1}{u}\right)_-2^-1\\
+    &=\left(\frac{1}{2}-1\right)-\left(2-\frac{1}{2}\right)=-2
+\end{align}
+
+\vs\next
+18.\begin{align}
+    \set
+    &\int_{1}^{8}\sqrt[]{\frac{2}{x}}dx\\
+    &=\sqrt[]{2}\int_{1}^{8}x^{-1/2}dx\\
+    &=(\sqrt[]{2}(2)x^{1/2})_1^8\\
+    &=(2\sqrt[]{2x})_1^8\\
+    &=8-2\sqrt[]{2}
+\end{align}
+
+\vs\next
+22.\begin{align}
+    \set
+    &\int_{-8}^{-1}\frac{x-x^2}{2\sqrt[3]{x}}dx\\
+    &=\frac{1}{2}\int_{-8}^{-1}(x^{2/3}-x^{5/3})dx\\
+    &=\frac{1}{2}\left(\frac{3}{5}x^{5/3}-\frac{3}{8}x^{8/3}\right)_{-8}^{-1}\\
+    &=-\frac{1}{80}(39)+\frac{32}{80}(144)\\
+    &=\frac{4569}{80}
+\end{align}
+
+\vs\next
+26.\begin{align}
+    \set
+    &\int_{0}^{4}|x^2-4x+3|dx\\
+    &=\int_{0}^{1}(x^2-4x+3)dx-\int_{1}^{3}(x^2-4x+3)dx+\int_{3}^{4}(x^2-4x+3)dx\\
+    &=\left(\frac{x^3}{3}-2x^2+3x\right)_0^1-\left(\frac{x^3}{3}-2x^2+3x\right)_1^3+\left(\frac{x^3}{3}-2x^2+3x\right)_3^4\\
+    &=\left(\frac{1}{3}-2+3\right)-(9-18+9)+\left(\frac{1}{3}-2+3\right)+\left(\frac{64}{3}-32+12\right)-(9-18+9)\\
+    &=\frac{4}{3}+\frac{4}{3}+\frac{4}{3}=4
+\end{align}
+
+\section{Evaluate the definite integral of the trigonometric function. Use a graphing utility to verify your result.}
+28.\begin{align}
+    \set
+    &\int_{0}^{\pi}(2+\cos x)dx\\
+    &=(2x+\sin x)_0^{\pi}\\
+    &=(2\pi+0)-0=2\pi
+\end{align}
+
+32.\begin{align}
+    \set
+    &\int_{\pi/4}^{\pi/2}(2-\csc^2x)dx\\
+    &=(2x+\cot x)_{\pi/4}^{\pi/2}\\
+    &=(\pi+0)-\left(\frac{\pi}{2}+1\right)\\
+    &=\frac{\pi}{2}-1\\
+    &=\frac{\pi-2}{2}
+\end{align}
+
+\vs\next
+34.\begin{align}
+    \set
+    &\int_{-\pi/2}^{\pi/2}(2t+\cos t)dt\\
+    &=(t^2+\sin t)_{-\pi/2}^{\pi/2}\\
+    &=\left(\frac{\pi^2}{4}+1\right)-\left(\frac{\pi^2}{4}-1\right)\\
+    &=2
+\end{align}
+
+\section{Determine the area of the given region.}
+36.$y=\frac{1}{x^2}$\\
+\im{36.png}\\
+\begin{align}
+    \set
+    A&=\int_{1}^{2}\frac{1}{x^2}dx\\
+    &=\left(-\frac{1}{x}\right)_1^2\\
+    &=\frac{1}{2}
+\end{align}
+
+\vs\next
+38.$y=x+\sin x$\\
+\im{38.png}\\
+\begin{align}
+    \set
+    A&=\int_{0}^{\pi}(x+\sin x)dx\\
+    &=\left(\frac{x^2}{2}-\cos x\right)_0^{/pi}\\
+    &=\frac{\pi^2}{2}+2\\
+    &=\frac{\pi^2+4}{2}
+\end{align}
+
+\section{Find the area of the region bounded by the
+graphs of the equations.}
+40.\begin{align}
+    \set
+    y&=x^3+x,\,\, x=2,\,\, y=0\\
+    A&=\int_{0}^{2}(x^3+x)dx\\
+    &=\left(\frac{x^4}{4}+\frac{x^2}{2}\right)_0^2\\
+    &=4+2=6
+\end{align}
+
+\vs\next
+42.\begin{align}
+    \set
+    y&=(3-x)\sqrt[]{x},\,\, y=0\\
+    A&=\int_{0}^{3}(3-x)\sqrt[]{x}dx\\
+    &=\int_{0}^{3}(3x^{1/2}-x^{3/2})dx\\
+    &=\left(\frac{3x^{3/2}}{\frac{3}{2}}-\frac{x^{5/2}}{\frac{5}{2}}\right)_0^3\\
+    &=\lt(2x^{3/2}-\frac{2}{5}x^{5/2}\rt)_0^3\\
+    &=2\cdot 3\cdot\sqrt[]{3}-\frac{2}{5}9\sqrt[]{3}\\
+    &=\frac{12}{5}\sqrt[]{3}
+\end{align}
+
+\section{Find the value(s) of $c$ guaranteed by the
+Mean Value Theorem for Integrals for the function over the
+given interval.}
+46.\begin{align}
+    \set
+    f(x)&=\frac{9}{x^3},\,\,[1, 3]\\
+    \int_{1}^{3}\frac{9}{x^3}dx&=\lt(-\frac{9}{2x^2}\rt)_1^3\\
+    &=-\frac{1}{2}+\frac{9}{2}=4\\
+    f(c)(3-1)&=4\\
+    \frac{9}{c^3}&=2\\
+    c^3&=\frac{9}{2}\\
+    c&=\sqrt[3]{\frac{9}{2}}\approx 1.6510
+\end{align}
+
+\vs\next
+50.\begin{align}
+    \set
+    f(x)&=\cos x,\,\, (-\frac{\pi}{3}, \frac{\pi}{3})\\
+    \int_{-\pi/3}^{\pi/3}\cos xdx&=(\sin x)_{-\pi/3}^{\pi/3}=\sqrt[]{3}\\
+    f(c)\lt(\frac{\pi}{3}-\lt(-\frac{\pi}{3}\rt)\rt)&=\sqrt[]{3}\\
+    \cos c&=\frac{3\sqrt[]{3}}{2\pi}\\
+    c&\approx\pm 0.5971
+\end{align}
+
+\section{Find the average value of the function over
+the given interval and all values of $x$ in the interval for which the
+function equals its average value.}
+52.\begin{align}
+    \set
+    f(x)&=\frac{4(x^2+1)}{x^2},\,\,[1, 3]\\
+    \frac{1}{3-1}\int_{1}^{3}\frac{4(x^2+1)}{x^2}dx&=2\int_{1}^{3}(1+x^{-2})dx\\
+    &=2\lt(x-\frac{1}{x}\rt)_1^3\\
+    &=2\lt(3-\frac{1}{3}\rt)=\frac{16}{3}\\
+    \frac{4(x^2+1)}{x^2}&=\frac{16}{3}\Rightarrow x=\sqrt[]{3},\,\,[1, 3]
+\end{align}
+
+\vs\next
+56.\begin{align}
+    \set
+    f(x)&=\cos x,\,\,[0,\frac{\pi}{2}]\\
+    &\frac{1}{\lt(\frac{\pi}{2}\rt)-0}\int_{0}^{\pi/2}\cos xdx\\
+    &=\lt(\frac{2}{\pi}\sin x\rt)_0^{\pi/2}\\
+    &=\frac{2}{\pi}\\
+    \cos x&=\frac{2}{\pi}\\
+    x&\approx 0.881
+\end{align}
+
+\section{Velocity}
+58.The graph shows the velocity, in feet per second, of a
+decelerating car after the driver applies the brakes. Use the graph
+to estimate how far the car travels before it comes to a stop.\\
+\im{58.png}\\
+The traveled distance is $\int_{0}^{5}v(t)dt$. The area under the curve at $0\leq t\leq 5$ is about $29(5)=145\text{ft}^2$.
+
+\section{Average sales}
+64. A company fits a model to the monthly sales
+data for a seasonal product. The model is $S(t)=\frac{t}{4}+1.8+0.5\sin\lt(\frac{\pi t}{6}\rt),\,\, 0\leq t\leq 24$ where $S$ is sales (in 
+thousands) and $t$ is time in months.
+
+\begin{enumerate}[(a)]
+    \item Use a graphing utility to graph $f(t)=0.5\sin\lt(\frac{\pi t}{6}\rt)$ for $0\leq t\leq 24$. Use the graph to explain why the average value of $f(t)$ is 0 over the interval.\\
+        \indent The area above the x-axis is the same as the area below the x-axis. Therefore, the average value is 0.
+    \item Use a graphing utility to graph $S(t)$ and the line $g(t)=\frac{t}{4}+1.8$ in the same viewing window. Use the graph and the result of part (a) to explain why $g$ is called the $trend$ $line$.
+        \indent $g$ is called the $trend$ $line$ because the average value of $S$ approaches this line.
+\end{enumerate}
+
+\section{Capstone}
+66. The graph of $f$ is shown in the figure. The shaded region $A$ has an area of 1.5, and $\int_{0}^{6}f(x)dx=3.5$. Use this information to fill in the blanks.
+\begin{enumerate}[(a)]
+    \item $\int_{0}^{2}f(x)dx=-1.5$
+    \item $\int_{2}^{6}f(x)dx=5$
+    \item $\int_{0}^{6}|f(x)|dx=6.5$
+    \item $\int_{0}^{2}-2f(x)dx=3$
+    \item $\int_{0}^{6}(2+f(x))dx=15.5$
+    \item The average value of $f$ over the interval [0. 6] is 0.5833.
+\end{enumerate}
+
+\section{Find F as a function of $x$ and evaluate it at $x=2$, $x=5$, and $x=8$.}
+68.\begin{align}
+    \set
+    F(x)&=\int_{2}^{x}(t^3+2t-2)dt\\
+    &=\lt(\frac{t^4}{4}+t^2-2t\rt)_2^x\\
+    &=\lt(\frac{x^4}{4}+x^2-2x\rt)-(4+4-4)\\
+    &=\frac{x^4}{4}+x^2-2x-4\\
+    F(2)&=4+4-4-4=0\\
+    F(5)&=\frac{625}{4}+25-10-4=167.25\\
+    F(8)&=\frac{8^4}{4}+64-16-4=1068
+\end{align}
+
+\vs\next
+72.\begin{align}
+    \set
+    F(x)&=\int_{0}^{x}\sin\theta d\theta=-\cos\theta|_0^x\\
+    &=-\cos x+\cos 0\\
+    &=1-\cos x\\
+    F(2)&=1-\cos 2\approx 1.4161\\
+    F(5)&=1-\cos 5\approx 0.7163\\
+    F(8)&=1-\cos 8\approx 1.1455
+\end{align}
+
+\vs\next
+74. Let $g(x)=\int_{0}^{x}f(t)dt$, where $f$ is the function whose graph is shown in the figure.\\
+\im{74.png}\\
+\begin{enumerate}[(a)]
+    \item Estimate $g(0)$, $g(2)$, $g(4)$, $g(6)$, and $g(8)$
+        \begin{align}
+            \set
+            g(0)&=\int_{0}^{0}f(t)dt=0\\
+            g(2)&=\int_{0}^{2}f(t)dt=-\frac{1}{2}(2)(4)=-4\\
+            g(4)&=\int_{0}^{4}f(t)dt=-\frac{1}{2}(4)(4)=-8\\
+            g(6)&=\int_{0}^{6}f(t)dt=-8+2+4=-2\\
+            g(8)&=\int_{0}^{8}f(t)dt=-2+6=4
+        \end{align}
+    \item Find the largest open interval on which $g$ is increasing. Find the largest open interval on which $g$ is decreasing.\\
+        \indent $g$ is decreasing on (0, 4) and increasing on (4, 8)
+    \item Identify any extrema of $g$.\\
+        \indent g is a minimum of -8 at $x=4$\\
+\end{enumerate}
+
+\section{(a) Integrate to find $F$ as a function of $x$ and
+(b) demonstrate the Second Fundamental Theorem of Calculus
+by differentiating the result in part (a).}
+76.\begin{enumerate}[(a)]
+    \item
+        \begin{align}
+            \set
+            \int_{0}^{x}t(t^2+1)dt&=\int_{0}^{x}(t^3+t)dt\\
+            &=\lt(\frac{1}{4}t^4+\frac{1}{2}t^2\rt)|_0^x\\
+            &=\frac{1}{4}x^4+\frac{1}{2}x^2\\
+            &=\frac{x^2}{4}(x^2+2)   
+        \end{align}
+    \item
+        \begin{align}
+            \set
+            &\frac{d}{dx}\lt(\frac{1}{4}x^4+\frac{1}{2}x^2\rt)\\
+            &=x^3+x\\
+            &=x(x^2+1)
+        \end{align}
+\end{enumerate}
+
+\section{Use the Second Fundamental Theorem of
+Calculus to find $F'(x)$}
+84.\begin{align}
+    \set
+    F(x)&=\int_{1}^{x}\sqrt[4]{t}dt\\
+    F'(x)&=\sqrt[4]{x}
+\end{align}
+
+\section{Find $F'(x)$.}
+88.\begin{align}
+    \set
+    F(x)&=\int_{-x}^{x}t^3dt=\lt(\frac{t^4}{4}\rt)_{-x}^x=0\\
+    F'(x)&=0
+\end{align}
+
+\vs\next
+92.\begin{align}
+    \set
+    F(x)&=\int_{0}^{x^2}\sin\theta^2 d\theta\\
+    F'(x)&=\sin(x^2)^2(2x)\\
+    &=2x\sin x^4
+\end{align}
+
+\vs\next
+94. Use the graph of the function $f$ show in the figure and the function called $g$ defined by $g(x)=\int_{0}^{x}f(t)dt$.\\
+\im{94.png}\\
+\begin{enumerate}[(a)]
+\item Complete the table.
+\begin{flushleft}
+    \begin{table}[h]
+        \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|}
+        \hline
+         $x$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\\hline
+         $g(x)$ & 1 & 2 & 0 & -2 & -4 & -6 & -3 & 0 & 3 & 6\\\hline
+        \end{tabular}
+    \end{table}
+\end{flushleft}
+\item Where does $g$ have its minimum? Explain.\\
+    \indent $g$ is minimum at (6, -6).
+\item Where does $g$ have a maximum? Explain.\\
+    \indent $g$ has a relative maximum at (2, 2).
+\item On what interval does $g$ increase at the greatest rate? Explain.\\
+    \indent $g$ increases at a rate of 3 on [6, 10].
+\item Identify the zeros of $g$.\\
+    \indent The zeros of $g$ are $x=3,\,\, 8$.
+\end{enumerate}
+
+\section{The velocity function, in feet per second, is
+given for a particle moving along a straight line. Find (a) the
+displacement and (b) the total distance that the particle travels
+over the given interval.}
+101.\begin{enumerate}[(a)]
+    \item\begin{align}
+        \set
+        v(t)&=\frac{1}{\sqrt[]{t}},\,\, 1\leq t\leq 4\\
+        \text{Total Distance}&=\text{Displacement}\\
+        \text{Displacement}&=\int_{1}^{4}t^{-1/2}dt\\
+        &=\lt(2t^{1/2}\rt)_1^4\\
+        &=4-2=2\text{ft to the right}
+    \end{align}
+    \item The total distance is 2 feet.
+\end{enumerate}
+
+\vs\next
+102.\begin{enumerate}[(a)]
+    \item\begin{align}
+        \set
+        v(t)&=\cos t,\,\, 0\leq t\leq 3\pi\\
+        \text{Displacement}&=\int_{0}^{3\pi}\cos tdt\\
+        &=\lt(\sin t\rt)_0^{3\pi}=0\text{ft}\\
+    \end{align}
+    \item\begin{align}
+        \set
+        \text{Total Distance}&=\int_{0}^{\pi/2}\cos tdt-\int_{\pi/2}^{3\pi/2}\cos tdt+\int_{3\pi/2}^{5\pi/2}\cos tdt-\int_{5\pi/2}^{3\pi}\cos tdt\\
+        &=(\sin t)_0^{\pi/2}-(\sin t)_{\pi/2}^{3\pi/2}+(\sin t)_{3\pi/2}^{5\pi/2}-(\sin t)_{5\pi/2}^{3\pi}\\
+        &=1-(-2)+2-(-1)=6
+    \end{align}
+\end{enumerate}
+
+\section{Oil Leak}
+106. At 1:00 P.M., oil begins leaking from a tank at a
+rate of $4+0.75t$ gallons per hour.
+\begin{enumerate}[(a)]
+    \item How much oil is lost from 1:00 P.M. to 4:00 P.M.?
+        \begin{align}
+            \set
+            &\int_{0}^{3}(4+0.75t)dt\\
+            &=\lt(4t+\frac{0.75}{2}t^2\rt)_0^3\\
+            &=\frac{123}{8}=15.375\text{gal}
+        \end{align}
+    \item How much oil is lost from 4:00 P.M. to 7:00 P.M.?
+        \begin{align}
+            \set
+            &\int_{3}^{6}(4+0.75t)dt\\
+            &=\lt(4t+\frac{0.75}{2}t^2\rt)_3^6\\
+            &=22.125\text{gal}
+        \end{align}
+    \item Compare your answers from parts (a) and (b). What do
+    you notice?
+        \indent The oil lost in the evening is more because the flow rate increased.    
+\end{enumerate}
+
+\section{Determine whether
+the statement is true or false. If it is false, explain why or give
+an example that shows it is false.}
+113. If $F'(x)=G'(x)$ on the interval [a, b], then $F(b)-F(a)=G(b)-G(a)$.\\
+\indent True.
+
+\vs\next
+114. If $f$ is continuous on [a, b], then $f$ is integrable on [a, b].\\
+\indent True.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
