@@ -19,7 +19,7 @@
 \section{The graph of the function with the
 graph of its inverse function. [The graphs of the inverse
 functions are labeled (a), (b), (c), and (d).]}
-\im{12.png}\\
+\im[scale=0.75]{12.png}\\
 10 matches (b) and 12 matches (d)
 
 \section{Use a graphing utility to graph the function.
@@ -149,6 +149,63 @@ $f$ has an inverse since it's monotonic on $[0,\,\frac{\pi}{2}]$.
     f'(x)&=\frac{1}{2\sqrt[]{x-4}}>0\,\,\text{on}\,\, (4,\,\infty)
 \end{align}
 $f$ has an inverse since it's monotonic on [4, $\infty$]
+
+\section{Find the domains of $f$ and $f^{-1}$, find the ranges of $f$ and $f^{-1}$, graph $f$ and $f^{-1}$, and show that the slopes of the graphs of $f$ and $f^{-1}$ are reciprocals at the given point.}
+82.\begin{align}
+    \set
+    f(x)&=3-4x,\,\, (1,\, -1);\,\, f^{-1}=\frac{3-x}{4},\,\, (-1,\, 1)\\
+    \text{Domain}\,\, f&=\text{Domain}\,\, f^{-1}=(-\infty,\,\infty)\\
+    \text{Range}\,\, f&=\text{Range}\,\, f^{-1}=(-\infty,\,\infty)\\
+    f'(x)&=-4\\
+    f'(-1)&=-4\\
+    (f^{-1})^{'}(x)&=-\frac{1}{4}\\
+    (f^{-1})^{'}(-1)&=-\frac{1}{4}
+\end{align}
+
+\section{Find $\frac{dy}{dx}$ for the equation at the given point.}
+86.\begin{align}
+    \set
+    x&=2\ln(y^2-3),\,\, (0,\, 2)\\
+    1&=2\frac{1}{y^2-3}2y\frac{dy}{dx}\\
+    \frac{dy}{dx}&=\frac{y^2-3}{4y}\\
+    &=\frac{4-3}{8}=\frac{1}{8}
+\end{align}
+
+\section{Use the functions $f(x)=\frac{1}{8}x-3$ and $g(x)=x^3$ to find the given value.}
+88.\begin{align}
+    \set
+    &(g^{-1}\circ f^{-1})(-3)\\
+    &=g^{-1}(f^{-1}(-3))\\
+    &=g^{-1}(0)=0
+\end{align}
+
+\section{Use the functions $f(x)x+4$ and $g(x)=2x-5$ to find the given function.}
+94.\begin{align}
+    \set
+    (g\circ f)(x)&=g(f(x))\\
+    &=g(x+4)\\
+    &=2(x+4)-5\\
+    &=2x+3\\
+    (g\circ f)^{-1}(x)&=\frac{x-3}{2}
+\end{align}
+
+\section{Determine whether the
+statement is true or false. If it is false, explain why or give an
+example that shows it is false.}
+101. If $f$ is an even function, then $f^{-1}$ exists.\\
+\indent False. This isn't true with $f(x)=x^2$.
+
+\vs\next
+102. If the inverse function of $f$ exists, then the y-intercept of $f$ is an $x$-intercept of $f^{-1}$.\\
+\indent True.
+
+\vs\next
+103. If $f(x)=x^n$, where $n$ is odd, then $f^{-1}$ exists.\\
+\indent True.
+
+\vs\next
+104. There exists no function $f$ such that $f=f^{-1}$.\\
+\indent False. One of these function is $f(x)=x$.
 
 
 \end{document}

@@ -1,0 +1,415 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsfonts, gensymb,  graphicx, enumerate, float, wrapfig, hyperref}
+\usepackage[margin=0.5in]{geometry}
+\graphicspath{{./}}
+\newcommand*{\vs}{\vspace{1cm}}
+\newcommand*{\next}{\noindent}
+\newcommand*{\set}{\setcounter{equation}{0}}
+\newcommand*{\im}{\includegraphics}
+\newcommand*{\lt}{\left}
+\newcommand*{\rt}{\right}
+\newcommand*{\s}{\section}
+\newcommand*{\Ra}{\Rightarrow}
+
+\begin{document}
+
+\title{5.4 Exponential Functions: Differentiation and Integration}
+\author{Juan J. Moreno Santos}
+\date{January 2024}
+
+\maketitle
+\s{Solve for $x$ accurate to three decimal places.}
+2.\begin{align}
+    \set
+    e^{\ln 2x}&=12\\
+    2x&=12\Ra x=6
+\end{align}
+
+10.\begin{align}
+    \set
+    \frac{5000}{1+e^{2x}}&=2\\
+    \frac{5000}{2}&=1+e^{2x}\\
+    2499&=e^{2x}\\
+    \ln 2499&=2x\\
+    x&=\frac{1}{2}\ln 2499\approx 3.912
+\end{align}
+
+\s{Sketch the graph of the function.}
+20. $y=e^{x-1}$\\
+\im{20.png}
+
+\s{Match the equation with the correct graph. Assume that $a$ and $C$ are positive real numbers.}
+\im{26.png}\\
+26.$y=Ce^{-ax}$\\
+Horizontal asymptote at $y=0$\\
+Reflects the $y$-axis and matches (d)
+
+28.\begin{align}
+    \set
+    y&=\frac{C}{1+e^{-ax}}\\
+    &\lim_{x\to\infty}\frac{C}{1+e^{-ax}}=C\\
+    &\lim_{x\to\infty}\frac{C}{1+e^{-ax}}=0\\
+\end{align}
+
+\s{Illustrate that the functions are inverses of
+each other by graphing both functions on the same set of
+coordinate axes}
+30.\begin{align}
+    \set
+    f(x)&=e^{x/3}\\
+    g(x)&=\ln x^3=3\ln x
+\end{align}
+\im{30.png}
+
+\s{Find an equation of the tangent line to the graph of the function at the point (0, 1)}
+38.\begin{align}
+    \set
+    y&=e^{2x}\\
+    y'&=2e^{2x}\\
+    y'(0)=2\\
+    \text{Tangent line}=y-1&=2(x-0)\\
+    y&=2x+1
+\end{align}
+
+\begin{align}
+    \set
+    y&=e{-2x}\\
+    y'&=-2e^{-2x}\\
+    y'(0)&=-2\\
+    \text{Tangent line}=y-1&=-2(x-0)\\
+    y&=-2x+1
+\end{align}
+
+\s{Find the derivative}
+40.\begin{align}
+    \set
+    y&=e^{-5x}\\
+    \frac{dy}{dx}&=-5e^{-5x}
+\end{align}
+
+44.\begin{align}
+    \set
+    f(x)&=3e^{1-x^2}\\
+    f'(x)&=3e^{1-x^2}(-2x)\\
+    &=-6xe^{1-x^2}
+\end{align}
+
+48.\begin{align}
+    \set
+    y&=x^2e^{-x}\\
+    y'&=x^2(-e^{-x})+2xe^{-x}\\
+    &=xe^{-x}(2-x)
+\end{align}
+
+52.\begin{align}
+    \set
+    y&=\ln\lt(\frac{1+e^x}{1-e^x}\rt)\\
+    &=\ln(1+e^x)-\ln(1-e^x)\\
+    \frac{dy}{dx}&=\frac{e^x}{1+e^x}+\frac{e^x}{1-e^x}\\
+    &=\frac{2e^x}{1-e^{2x}}
+\end{align}
+
+56.\begin{align}
+    \set
+    y&=\frac{e^{2x}}{e^{2x}+1}\\
+    y'&=\frac{(e^{2x}+1)2e^{2x}-e^{2x}(2e^{2x})}{(e^{2x}+1)^2}\\
+    &=\frac{2e^{2x}}{(e^{2x}+1)^2}
+\end{align}
+
+60.\begin{align}
+    \set
+    F(x)&=\int_{0}^{e^{2x}}\ln(t+1)dt\\
+    F'(x)&\ln(e^{2x}+1)2e^{2x}\\
+    &=2e^{2x}\ln(e^{2x}+1)
+\end{align}
+
+\s{Find an equation of the tangent line to the graph of the function at the given point.}
+62.\begin{align}
+    \set
+    y&=e^{-2x+x^2},\,\, (2,\, 1)\\
+    y'&=(2x-2)e^{-2x+x^2},\,\, y'(2)=2\\
+    \text{Tangent line}=y-1&=2(x-2)\\
+    y&=2x-3
+\end{align}
+
+66.\begin{align}
+    \set
+    y&=xe^x-e^x,\,\, (1,\, 0)\\
+    y'&=xe^x+e^x-e^x=xe^x\\
+    y'(1)&=e\\
+    \text{Tangent line}=y-0&=e(x-1)\\
+    y&=ex-e
+\end{align}
+
+\s{Use implicit differentiation to find $\frac{dy}{dx}$.}
+\begin{align}
+    \set
+    e^{xy}+x^2-y^2&=10\\
+    \lt(x\frac{dy}{dx}+y\rt)e^{xy}+2x-2y\frac{dy}{dx}&=0\\
+    \frac{dy}{dx}(xe^{xy}-2y)&=-ye^{xy}-2x\\
+    \frac{dy}{dx}&=-\frac{ye^{xy}+2x}{xe^{xy}-2y}
+\end{align}
+
+\s{Find an equation of the tangent line to
+the graph of the function at the given point.}
+72.\begin{align}
+    \set
+    1+\ln(xy)&=e^{x-y},\,\, (1,\, 1)\\
+    \frac{1}{xy}(xy'+y)&=e^{x-y}(1-y')\\
+    y'+1&=1-y'\\
+    y'&=0
+\end{align}
+
+\s{Find the second derivative of the function.}
+74.\begin{align}
+    \set
+    g(x)&=\sqrt[]{x}+e^x\ln x\\
+    g'(x)&=\frac{1}{2\sqrt[]{x}}+\frac{e^x}{x}+e^x\ln x\\
+    g''(x)&=-\frac{1}{4x^{3/2}}+\frac{xe^x-e^x}{x^2}+\frac{e^x}{x}+e^x\ln x\\
+    &=-\frac{1}{4x\sqrt[]{x}}+\frac{e^x(2x-1)}{x^2}+e^x\ln x
+\end{align}
+
+\s{Find the extrema and the points of inflection
+(if any exist) of the function}
+80.\begin{align}
+    \set
+    f(x)&=\frac{e^x-e^{-x}}{2}\\
+    f'(x)&=\frac{e^x+e^{-x}}{2}>0\\
+    f''(x)&=\frac{e^x-e^{-x}}{2}=0\,\,\text{when}\,\, x=0\\
+    &\text{Inflection point at (0, 0)}
+\end{align}
+
+84.\begin{align}
+    \set
+    f(x)&=xe^{-x}\\
+    f'(x)&=-xe^{-x}+e^{-x}\\
+    &=e^{-x}(1-x)=0\,\,\text{when}\,\, x=1\\
+    f''(x)&=-e^{-x}+(-e^{-x})(1-x)\\
+    &=e^{-x}(x-2)=0\,\,\text{when}\,\, x=2\\
+    &\text{Relative maximum at }(1, e^{-1})\\
+    &\text{Inflection point at }(2, 2e^{-2})
+\end{align}
+
+\s{Word problems}
+90. Find the point on the graph of $y=e^{-x}$ where the normal line to
+the curve passes through the origin.\\
+\indent Let $(x_0,\, y_0)$ be the coordinate on the graph.
+\begin{align}
+    \set
+    y&=e^{-x}\\
+    y'&=-e^{-x}\\
+    -\frac{1}{y'}&=e^x\\
+    y-e^{-x_0}&=e^{x_0}(x-x_0)\\
+\end{align}
+Because the curve passes through the origin,
+\begin{align}
+    -e^{-x_0}&=-x_0e^{x_0}\\
+    1&=x_0e^{2x_0}\\
+    x_0e^{2x_0}-1&=0\therefore x_0\approx 0.4263
+\end{align}
+
+\vs\next
+92. The displacement from equilibrium of a
+mass oscillating on the end of a spring suspended from a
+ceiling is $y=1.56e^{-0.22t}\cos 4.9t$, where $y$ is the displacement
+in feet and $t$ is the time in seconds. Use a graphing utility to
+graph the displacement function on the interval [0, 10] Find a
+value of $t$ past which the displacement is less than 3 inches from
+equilibrium.\\
+\indent $1.56e^{-0.22t}\cos 4.9t\leq 0.25$. With a calculator, it is determined that $t\geq 7.79$ seconds.
+
+\vs\next
+94. The table lists the approximate values $V$ of a mid-sized sedan for the years 2003 through 2009. The variable $t$ represents the time in years, with $t=3$ corresponding to 2003.\\
+\im{94.png}\\
+\begin{enumerate}[(a)]
+    \item Use the regression capabilities of a graphing utility to fit
+    linear and quadratic models to the data. Plot the data and
+    graph the models.
+        \indent\begin{align}
+            \text{Linear model: }V&=-1686.8t+27501\\
+            \text{Quadratic model: }V&=109.52t^2-3001.1t+31006
+        \end{align}
+    \item What does the slope represent in the linear model in
+    part (a)?\\
+        \indent The average value loss each year.
+    \item Use the regression capabilities of a graphing utility to fit an
+    exponential model to the data.\\
+        \indent $V=30582.68(0.90724)^t=30582.68e^{-0.09735t}$
+    \item Determine the horizontal asymptote of the exponential
+    model found in part (c). Interpret its meaning in the context
+    of the problem.\\
+        \indent As $t\rightarrow 0$, $V\rightarrow 0$ in the model, indicating that the value tends to zero.
+    \item Find the rate of decrease in the value of the sedan when $t=4$ and $t=8$ using the exponential model.
+        \indent\begin{align}
+            \set
+            \text{When }t&=4,\,\, V'\approx -2017\,\,\text{dollars/year}\\
+            \text{When }t&=8,\,\, V'\approx -1366\,\,\text{dollars/year}
+        \end{align}
+\end{enumerate}
+
+\s{Find the indefinite integral.}
+100.\begin{align}
+    \set
+    &\int e^{-x^4}(-4x^3)dx,\,\, u=-x^4,\,\, du=-4x^3dx\\
+    &=e^{-x^4}+C
+\end{align}
+
+\vs\next
+104.\begin{align}
+    \set
+    &\int e^x(e^x+1)^2dx,\,\, u=e^x+1,\,\, du=e^xdx\\
+    &=\int(e^x+1)^2(e^x)dx\\
+    &=\frac{(e^x+1)^3}{3}+C
+\end{align}
+
+\vs\next
+108.\begin{align}
+    \set
+    &\frac{e^{2x}}{1+e^{2x}}dx,\,\, u=1+e^{2x},\,\, du=2e^{2x}dx\\
+    &=\frac{1}{2}\int\frac{2e^{2x}}{1+e^{2x}}dx\\
+    &=\frac{1}{2}\ln(1+e^{2x})+C
+\end{align}
+
+\vs\next
+112.\begin{align}
+    \set
+    &\int\frac{2e^x-2e^{-x}}{(e^x+e^{-x})^2}dx\\
+    &=2\int(e^x+e^{-x})^{-2}(e^x-e^{-2})dx\\
+    &=\frac{-2}{e^x+e^{-x}}+C
+\end{align}
+
+\vs\next
+116.\begin{align}
+    \set
+    &\int\ln(e^{2x-1})dx\\
+    &=\int(2x-1)dx\\
+    &=x^2-x+C
+\end{align}
+
+\s{Evaluate the definite integral.}
+118.\begin{align}
+    \set
+    &\int_{3}^{4}e^{3-x}dx\\
+    &=[-e^{3-x}]_3^4\\
+    &=-e^{-1}+1\\
+    &=1-\frac{1}{e}
+\end{align}
+
+\vs\next
+122.\begin{align}
+    \set
+    &\int_{0}^{\sqrt[]{2}}xe^{-x^2/2}dx,\,\, u=\frac{-x^2}{2},\,\, du=-xdx\\
+    &=-\int_{0}^{\sqrt[]{2}}e^{-x^2/2}(-x)dx\\
+    &=[-e^{-x^2/2}]_0^{\sqrt[]{2}}\\
+    &=1-e^{-1}
+\end{align}
+
+126.\begin{align}
+    \set
+    &\int_{\pi/3}^{\pi/2}e^{\sec 2x}\sec 2x\tan 2xdx,\,\, u=\sec 2x,\,\, du=2\sec 2x\tan 2xdx\\
+    &=\frac{1}{2}\int_{\pi/3}^{\pi/2}e^{\sec 2x}(2\sec 2x\tan 2x)dx\\
+    &=\frac{1}{2}[e^{\sec 2x}]_{\pi/3}^{\pi/2}\\
+    &=\frac{1}{2}(e^{-1}-e^{-2})\\
+    &=\frac{1}{2}\lt(\frac{1}{e}-\frac{1}{e^2}\rt)\\
+    &=\frac{e-1}{2e^2}
+\end{align}
+
+\s{Solve the differential equation.}
+128.\begin{align}
+    \set
+    \frac{dy}{dx}&=(e^x-e^{-x})^2\\
+    y&=\int(e^x-e^{-x})^2dx\\
+    &=\int(e^{2x}-2+e^{-2x})dx\\
+    &=\frac{1}{2}e^{2x}-2x-\frac{1}{2}e^{-2x}+C
+\end{align}
+
+\s{Find the
+particular solution that satisfies the initial conditions.}
+130.\begin{align}
+    \set
+    f''(x)&=\sin x+e^{2x}\\
+    f(0)&=\frac{1}{4}\\
+    f'(0)&=\frac{1}{2}\\
+    f'(x)&=\int(\sin x+e^{2x})dx=-\cos x+\frac{1}{2}e^{2x}+C_1\\
+    f'(0)&=-1+\frac{1}{2}+C_1=\frac{1}{2}\therefore C_1=1\\
+    f'(x)&=-\cos x+\frac{1}{2}e^{2x}+1\\
+    f(x)&=\int(-\cos x+\frac{1}{2}e^{2x}+1)dx\\
+    &=-\sin x+\frac{1}{4}e^{2x}+x+C_2\\
+    f(0)&=\frac{1}{4}+C_2=\frac{1}{4}\therefore C_2=0\\
+    f(x)&=x-\sin x+\frac{1}{4}e^{2x}
+\end{align}
+
+\s{Find the area of the region bounded
+by the graphs of the equations.}
+134.\begin{align}
+    \set
+    y&=e^{-x},\,\, y=0,\,\, x=a,\,\, x=b\\
+    \int_{a}^{b}e^{-x}dx&=[-e^{-x}]_a^b=e^a-e^b
+\end{align}
+
+\vs\next
+136.\begin{align}
+    \set
+    y&=e^{-2x}+2x,\,\, y=0,\,\, x=0,\,\, x=2\\
+    \int_{0}^{2}(e^{-2x}+2)dx&=\lt[-\frac{1}{2}e^{-2x}+2x\rt]_0^2\\
+    &=-\frac{1}{2}e^{-4}+4+\frac{1}{2}\approx 4.491
+\end{align}
+
+\s{Approximate
+the integral using the Midpoint Rule, the Trapezoidal Rule, and
+Simpson’s Rule with $n=12$.}
+138.\begin{align}
+    \set
+    &\int_{0}^{2}2xe^{-x}dx,\,\, n=12\\
+    &\text{Midpoint Rule = }1.1906\\
+    &\text{Trapezoidal Rule = }1.1827\\
+    &\text{Simpson's Rule = }1.1880\\
+    &\text{Calculator = }1.18799
+\end{align}
+
+\s{Word problems}
+140. The median waiting time (in minutes) for people
+waiting for service in a convenience store is given by the
+solution of the equation $\int_{0}^{x}0.3e^{-0.3}dt=\frac{1}{2}$. Solve the equation.
+\begin{align}
+    \set
+    \int_{0}^{x}0.3e^{-0.3}dt=\frac{1}{2}&=\frac{1}{2}\\
+    [-e^{-0.3t}]_0^x&=\frac{1}{2}\\
+    -e{-0.3x}+1&=\frac{1}{2}\\
+    e^{-0.3x}&=\frac{1}{2}\\
+    -0.3x&=\ln\frac{1}{2}=-\ln 2\\
+    x&=\frac{\ln 2}{0.3}\approx 2.31\text{ minutes}
+\end{align}
+
+\s{Capstone}
+148. Describe the relationship between the graphs of $f(x)=\ln x$ and $g(x)=e^x$.\\
+\indent Both graphs mirror each other across the line $y=x$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

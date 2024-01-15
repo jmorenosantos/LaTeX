@@ -1,7 +1,7 @@
-PWD c:\Users\famil\OneDrive\Documents\GitHub\LaTeX\AP Calc AB\Homework\5.3
+PWD c:\Users\famil\OneDrive\Documents\GitHub\LaTeX\AP Calc AB\Homework\5.4
 INPUT C:\Users\famil\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\famil\OneDrive\Documents\GitHub\LaTeX\AP Calc AB\Homework\5.3\5.3 Inverse functions.tex
-OUTPUT 5.3 Inverse functions.log
+INPUT c:\Users\famil\OneDrive\Documents\GitHub\LaTeX\AP Calc AB\Homework\5.4\5.4 Exponential Functions Differentiation and Integration.tex
+OUTPUT 5.4 Exponential Functions Differentiation and Integration.log
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\tex\latex\base\size11.clo
@@ -112,10 +112,10 @@ INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.c
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\5.3 Inverse functions.aux
-INPUT .\5.3 Inverse functions.aux
-INPUT 5.3 Inverse functions.aux
-OUTPUT 5.3 Inverse functions.aux
+INPUT .\5.4 Exponential Functions Differentiation and Integration.aux
+INPUT .\5.4 Exponential Functions Differentiation and Integration.aux
+INPUT 5.4 Exponential Functions Differentiation and Integration.aux
+OUTPUT 5.4 Exponential Functions Differentiation and Integration.aux
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -124,14 +124,14 @@ INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstop
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT .\5.3 Inverse functions.out
-INPUT .\5.3 Inverse functions.out
-INPUT 5.3 Inverse functions.out
-INPUT 5.3 Inverse functions.out
-OUTPUT 5.3 Inverse functions.pdf
-INPUT .\5.3 Inverse functions.out
-INPUT .\5.3 Inverse functions.out
-OUTPUT 5.3 Inverse functions.out
+INPUT .\5.4 Exponential Functions Differentiation and Integration.out
+INPUT .\5.4 Exponential Functions Differentiation and Integration.out
+INPUT 5.4 Exponential Functions Differentiation and Integration.out
+INPUT 5.4 Exponential Functions Differentiation and Integration.out
+OUTPUT 5.4 Exponential Functions Differentiation and Integration.pdf
+INPUT .\5.4 Exponential Functions Differentiation and Integration.out
+INPUT .\5.4 Exponential Functions Differentiation and Integration.out
+OUTPUT 5.4 Exponential Functions Differentiation and Integration.out
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
@@ -159,19 +159,6 @@ INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT .\12.png
-INPUT .\12.png
-INPUT .\12.png
-INPUT .\12.png
-INPUT .\12.png
-INPUT .\12.png
-INPUT .\12.png
-INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\famil\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
@@ -182,16 +169,43 @@ INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT .\64.png
-INPUT .\64.png
-INPUT .\64.png
-INPUT .\64.png
-INPUT .\64.png
-INPUT .\64.png
-INPUT .\64.png
-INPUT 5.3 Inverse functions.aux
-INPUT .\5.3 Inverse functions.out
-INPUT .\5.3 Inverse functions.out
+INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT .\20.png
+INPUT .\20.png
+INPUT .\20.png
+INPUT .\20.png
+INPUT .\20.png
+INPUT .\20.png
+INPUT .\20.png
+INPUT .\26.png
+INPUT .\26.png
+INPUT .\26.png
+INPUT .\26.png
+INPUT .\26.png
+INPUT .\26.png
+INPUT .\26.png
+INPUT C:\Users\famil\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\30.png
+INPUT .\30.png
+INPUT .\30.png
+INPUT .\30.png
+INPUT .\30.png
+INPUT .\30.png
+INPUT .\30.png
+INPUT .\94.png
+INPUT .\94.png
+INPUT .\94.png
+INPUT .\94.png
+INPUT .\94.png
+INPUT .\94.png
+INPUT .\94.png
+INPUT 5.4 Exponential Functions Differentiation and Integration.aux
+INPUT .\5.4 Exponential Functions Differentiation and Integration.out
+INPUT .\5.4 Exponential Functions Differentiation and Integration.out
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
@@ -200,6 +214,8 @@ INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
@@ -214,8 +230,6 @@ INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
-INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\famil\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
